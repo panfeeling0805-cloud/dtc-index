@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 from app.database import get_db
@@ -20,6 +21,6 @@ def join_waitlist(data: WaitlistCreate, db: Session = Depends(get_db)):
     return entry
 
 
-@router.get("", response_model=list[WaitlistResponse])
+@router.get("", response_model=List[WaitlistResponse])
 def list_waitlist(db: Session = Depends(get_db)):
     return db.query(Waitlist).all()
