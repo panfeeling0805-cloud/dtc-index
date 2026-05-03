@@ -1,0 +1,357 @@
+import { useState } from 'react'
+import CtaLink from '../components/CtaLink'
+
+const faqs = [
+  { q: 'What can I use Sapientia for on Amazon?', a: 'Sapientia automates Amazon PPC campaign management, keyword strategy, bid optimization, and provides AI-driven recommendations to improve organic ranking and ACOS.' },
+  { q: 'Is there a money-back guarantee?', a: 'Yes. If the product does not meet your expectations within the guarantee period, you can request a full refund according to our policy.' },
+  { q: 'Can I invite my team to use Sapientia?', a: 'Absolutely. Create team spaces, assign roles and permissions, and collaborate on strategies and reports in real time.' },
+  { q: 'Does Sapientia have an affiliate program?', a: 'We offer an affiliate program for qualified partners. Contact us to learn more about commissions and requirements.' },
+  { q: 'Are there tutorials or guides to help me use Sapientia?', a: 'Yes. You can access our knowledge base, quick-start tutorials, and in-product tips to get up to speed quickly.' },
+  { q: 'Can Sapientia integrate with other software I use?', a: 'We support integrations with Amazon Seller Central, Amazon Ads, and major e-commerce analytics tools. API access is available on the Strategic Partner plan.' },
+]
+
+export default function ProductAmazon() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  return (
+    <main style={{ background: 'white', minHeight: '100vh', overflow: 'hidden' }}>
+
+      {/* ── HERO ── */}
+      <section style={{
+        background: 'linear-gradient(180deg, #eaf3ff 0%, #f8fbff 60%, #ffffff 100%)',
+        padding: '80px 48px 60px',
+        textAlign: 'center',
+      }}>
+        <h1 style={{
+          fontFamily: "'Sora', sans-serif", fontWeight: 800,
+          fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: 1.1,
+          color: '#0D1B2A', marginBottom: 16,
+        }}>
+          The smarter way to win<br />on Amazon
+        </h1>
+        <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 560, margin: '0 auto 32px', lineHeight: 1.7 }}>
+          Most tools automate campaigns, but keep decisions hidden. Sapientia does both — saving you hours with AI-driven automation while showing exactly why each change is made. The result: fewer ACOS, higher ROI, and strategies that stay with your team, long after you hit the pause.
+        </p>
+        <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100 }}>
+          Book a Demo
+        </CtaLink>
+
+        {/* Dashboard mockup */}
+        <div style={{
+          maxWidth: 720, margin: '56px auto 0',
+          background: 'white', borderRadius: 20,
+          boxShadow: '0 8px 48px rgba(27,110,243,0.13)',
+          border: '1px solid #e4eeff', overflow: 'hidden',
+        }}>
+          {/* Window chrome */}
+          <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
+            <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 10 }}>Campaign Analytics</span>
+          </div>
+          <div style={{ padding: '24px', display: 'grid', gridTemplateColumns: '1fr 1fr 1.4fr', gap: 16, alignItems: 'start' }}>
+            {/* ACOS metric */}
+            <div style={{ background: '#fff0f0', borderRadius: 14, padding: '18px' }}>
+              <div style={{ fontSize: 11, color: '#6B7A8D', fontWeight: 600, marginBottom: 8 }}>ACOS Reduction</div>
+              <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 32, fontWeight: 800, color: '#ef4444' }}>-32%</div>
+              <div style={{ fontSize: 11, color: '#6B7A8D', marginTop: 4 }}>vs last period</div>
+            </div>
+            {/* PPC Growth metric */}
+            <div style={{ background: '#f0fdf4', borderRadius: 14, padding: '18px' }}>
+              <div style={{ fontSize: 11, color: '#6B7A8D', fontWeight: 600, marginBottom: 8 }}>PPC Growth</div>
+              <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 32, fontWeight: 800, color: '#22c55e' }}>+187%</div>
+              <div style={{ fontSize: 11, color: '#6B7A8D', marginTop: 4 }}>revenue increase</div>
+            </div>
+            {/* AI Recommendation */}
+            <div style={{ background: '#EAF1FF', borderRadius: 14, padding: '18px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+                <span style={{ fontSize: 14 }}>✦</span>
+                <span style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', fontFamily: "'Sora', sans-serif" }}>AI Recommendation</span>
+              </div>
+              <p style={{ fontSize: 12, color: '#0D1B2A', lineHeight: 1.6 }}>
+                Increase bid to 15% for <strong>"running shoes"</strong> to improve organic ranking
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 1: Focus on strategy ── */}
+      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+          {/* Left — strategy dashboard mockup */}
+          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
+            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
+              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Campaign Strategy Dashboard</span>
+            </div>
+            <div style={{ padding: '20px' }}>
+              {[
+                { label: 'High-CTR Headphones', tag: 'Auto', tagColor: '#1B6EF3', tagBg: '#EAF1FF' },
+                { label: 'Keyword: wireless earbuds', tag: 'Active', tagColor: '#22c55e', tagBg: '#f0fdf4' },
+                { label: 'Keyword: bluetooth speaker', tag: 'Paused', tagColor: '#f59e0b', tagBg: '#fff7ed' },
+              ].map(item => (
+                <div key={item.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid #f0f4ff' }}>
+                  <span style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500 }}>{item.label}</span>
+                  <span style={{ fontSize: 10, fontWeight: 700, color: item.tagColor, background: item.tagBg, padding: '3px 8px', borderRadius: 100 }}>{item.tag}</span>
+                </div>
+              ))}
+              <div style={{ marginTop: 16, background: '#EAF1FF', borderRadius: 10, padding: '12px 14px' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', marginBottom: 6 }}>✦ Auto-Generated Strategy</div>
+                <p style={{ fontSize: 12, color: '#0D1B2A', lineHeight: 1.6 }}>Boost bids on top-performing keywords and suppress low-CTR terms to reduce wasted spend.</p>
+              </div>
+              <div style={{ marginTop: 10, background: '#f0fdf4', borderRadius: 10, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontSize: 12 }}>🏷️</span>
+                <span style={{ fontSize: 12, fontWeight: 600, color: '#16a34a' }}>Smart Tag Filter Applied</span>
+              </div>
+              <div style={{ marginTop: 16, borderTop: '1px solid #f0f4ff', paddingTop: 12 }}>
+                <span style={{ fontSize: 11, color: '#6B7A8D', fontStyle: 'italic' }}>"Manage strategies, not spreadsheets. ⚡"</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right */}
+          <div>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
+              Campaign Co-Pilot
+            </p>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
+              Focus on <span className="gradient-text">strategy</span>,<br />not manual campaign<br />management
+            </h2>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+              Your strategy on campaign co-pilot.
+            </p>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
+              Sapientia auto-tags thousands of products, keywords, ads, and performance signals with 2000+ smart labels. Operators can filter those tags to instantly build strategies — like discovering low-converting terms or scaling high-CTR products.
+            </p>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75 }}>
+              Then apply optimizations at scale, instead of digging through endless reports, you manage campaigns at the <span style={{ color: '#1B6EF3', fontWeight: 600 }}>strategy level</span>, not keyword by keyword.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 2: Transparent strategies ── */}
+      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+          {/* Left */}
+          <div>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
+              Full Transparency
+            </p>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
+              Transparent<br />
+              <span className="gradient-text">strategies.</span> Every<br />move explained.
+            </h2>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+              No more black-box optimization
+            </p>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75 }}>
+              Traditional automation is often a black box: you see the results, but not the reasons. Our white-box approach creates every recommendation, making strategies visible, traceable, and refutable. Teams gain confidence and managers can finally understand where their ad spend goes.
+            </p>
+          </div>
+
+          {/* Right — audience dashboard mockup */}
+          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
+            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
+              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Strategy Audience Dashboard</span>
+            </div>
+            <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div style={{ background: '#f0fdf4', borderRadius: 12, padding: '14px 16px' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#16a34a', marginBottom: 8 }}>✓ Recommendation Applied</div>
+                <p style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500 }}>Increased bid for "wireless headphones" by <strong>15%</strong></p>
+                <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
+                  <div style={{ background: 'white', borderRadius: 8, padding: '6px 12px', fontSize: 11, color: '#22c55e', fontWeight: 700 }}>CTR +22%</div>
+                  <div style={{ background: 'white', borderRadius: 8, padding: '6px 12px', fontSize: 11, color: '#1B6EF3', fontWeight: 700 }}>Rank #3 → #1</div>
+                </div>
+              </div>
+              <div style={{ background: '#fff7ed', borderRadius: 12, padding: '14px 16px' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#f97316', marginBottom: 8 }}>⏳ Pending Action</div>
+                <p style={{ fontSize: 13, color: '#0D1B2A' }}>Pause keyword "cheap earphones" — ACOS 68%, below threshold</p>
+              </div>
+              <div style={{ background: '#EAF1FF', borderRadius: 12, padding: '14px 16px' }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', marginBottom: 8 }}>📈 Strategy Impact Forecast</div>
+                <p style={{ fontSize: 13, color: '#0D1B2A' }}>Projected ACOS reduction: <strong>-8%</strong> · Budget reallocation: <strong>$340</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: Reusable asset ── */}
+      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+          {/* Left — asset library mockup */}
+          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
+            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
+              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Dashboard Hub / Asset Library</span>
+            </div>
+            <div style={{ padding: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              {[
+                { icon: '🔑', label: 'Keyword Library', color: '#EAF1FF', textColor: '#1B6EF3' },
+                { icon: '📦', label: 'Product Database', color: '#f0fdf4', textColor: '#16a34a' },
+                { icon: '🧠', label: 'Strategy Intelligence', color: '#fdf4ff', textColor: '#9333ea' },
+                { icon: '🏷️', label: 'Tags Library', color: '#fff7ed', textColor: '#f97316' },
+                { icon: '📋', label: 'Strategy Templates', color: '#f0fdf4', textColor: '#16a34a' },
+                { icon: '⚡', label: 'Campaign Tactics', color: '#EAF1FF', textColor: '#1B6EF3' },
+              ].map(item => (
+                <div key={item.label} style={{ background: item.color, borderRadius: 12, padding: '14px', display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <span style={{ fontSize: 20 }}>{item.icon}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: item.textColor, fontFamily: "'Sora', sans-serif" }}>{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right */}
+          <div>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
+              Intelligence Hub
+            </p>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
+              Turn every campaign<br />into a{' '}
+              <span className="gradient-text">reusable asset.</span>
+            </h2>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+              Build an intelligence hub that compounds over time.
+            </p>
+            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
+              Great strategies shouldn't disappear with each campaign. Sapientia transforms daily campaigns into an ever-growing, reusable modular — building your company's sort of <span style={{ color: '#1B6EF3', fontWeight: 600 }}>playbook</span>: from keywords to audiences, from creatives to bidding tactics — each strategy becoming smarter, faster to deploy.
+            </p>
+            <p style={{ fontSize: 13, color: '#6B7A8D', fontStyle: 'italic' }}>"From one sprint to all-in-all. 🚀"</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 4: Custom AI Models ── */}
+      <section style={{
+        background: 'linear-gradient(135deg, #0f1729 0%, #1a2a50 60%, #0f1729 100%)',
+        padding: '96px 48px',
+        position: 'relative', overflow: 'hidden',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
+          backgroundSize: '32px 32px', pointerEvents: 'none',
+        }} />
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center', position: 'relative', zIndex: 1 }}>
+          {/* Left */}
+          <div>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
+              Enterprise Grade
+            </p>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: 'white' }}>
+              Custom AI Models<br />
+              <span className="gradient-text">— for brands that<br />need more.</span>
+            </h2>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+              An opt-in option for enterprise-level precision.
+            </p>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75 }}>
+              Standard AI models already deliver strong results, but for brands that want an edge, Sapientia offers <span style={{ color: '#a5c4ff', fontWeight: 600 }}>custom-trained models</span> as an add-on. These models are trained on your own data — products, keywords, audience signals, seasonality — so strategies are significantly sharper over time, under your insights, all your data stays private.
+            </p>
+          </div>
+
+          {/* Right — custom model cards */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 16, padding: '20px', overflow: 'hidden' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+                <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.7)', marginLeft: 8 }}>Custom Model Training Cards</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
+                <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Model Training Status</span>
+                <span style={{ fontSize: 10, fontWeight: 700, color: '#22c55e', background: 'rgba(34,197,94,0.15)', padding: '3px 8px', borderRadius: 100 }}>● Active</span>
+              </div>
+              <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 12px', marginBottom: 6 }}>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginBottom: 4 }}>Model: SapientiaBrand_v2.1</div>
+                <div style={{ height: 4, background: 'rgba(255,255,255,0.08)', borderRadius: 100 }}>
+                  <div style={{ width: '78%', height: '100%', background: 'linear-gradient(90deg, #1B6EF3, #7C3AED)', borderRadius: 100 }} />
+                </div>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 4 }}>Training: 78% complete</div>
+              </div>
+            </div>
+
+            <div style={{ background: 'rgba(27,110,243,0.12)', border: '1px solid rgba(27,110,243,0.25)', borderRadius: 16, padding: '18px' }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: '#a5c4ff', marginBottom: 10 }}>📈 Performance Improvement</div>
+              <div style={{ display: 'flex', gap: 12 }}>
+                <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 10, padding: '10px', textAlign: 'center' }}>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, color: '#22c55e' }}>+41%</div>
+                  <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>ROAS uplift</div>
+                </div>
+                <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 10, padding: '10px', textAlign: 'center' }}>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, color: '#a5c4ff' }}>-29%</div>
+                  <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>ACOS drop</div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: '18px', display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ fontSize: 22 }}>🔒</span>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: 'white', marginBottom: 3 }}>Privacy Protected</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>Your training data never leaves your environment. Fully isolated model deployment.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section style={{ background: 'white', padding: '96px 48px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <h2 style={{
+            fontFamily: "'Sora', sans-serif",
+            fontSize: 'clamp(32px, 4vw, 52px)',
+            fontWeight: 800, textAlign: 'center',
+            marginBottom: 64, color: '#0D1B2A',
+          }}>
+            Frequently Asked Questions
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {faqs.map((faq, i) => (
+              <div key={i} style={{ borderTop: '1px solid #EAECF0' }}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{
+                    width: '100%', background: 'none', border: 'none', cursor: 'pointer',
+                    display: 'flex', alignItems: 'flex-start', gap: 12,
+                    padding: '24px 0', textAlign: 'left',
+                  }}
+                >
+                  <span style={{ color: '#0D1B2A', fontSize: 16, lineHeight: 1, marginTop: 2, flexShrink: 0 }}>•</span>
+                  <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', flex: 1, lineHeight: 1.4 }}>
+                    {faq.q}
+                  </span>
+                  <span style={{
+                    flexShrink: 0, fontSize: 16, color: '#6B7A8D', marginTop: 2,
+                    transform: openFaq === i ? 'rotate(90deg)' : 'none',
+                    transition: 'transform 0.2s', display: 'inline-block',
+                  }}>›</span>
+                </button>
+                {openFaq === i && (
+                  <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, paddingLeft: 28, paddingBottom: 24, marginTop: -8 }}>
+                    {faq.a}
+                  </p>
+                )}
+              </div>
+            ))}
+            <div style={{ borderTop: '1px solid #EAECF0' }} />
+          </div>
+        </div>
+      </section>
+
+    </main>
+  )
+}
