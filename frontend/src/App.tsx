@@ -9,6 +9,11 @@ import ProductTikTok from './pages/ProductTikTok'
 import ProductAmazon from './pages/ProductAmazon'
 import Auth from './pages/Auth'
 import Dashboard from './pages/Dashboard'
+import WhiteBoxAI from './pages/features/WhiteBoxAI'
+import UnifiedDashboard from './pages/features/UnifiedDashboard'
+import IntelligenceHub from './pages/features/IntelligenceHub'
+import Resources from './pages/Resources'
+import AboutUs from './pages/AboutUs'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -33,6 +38,11 @@ function Layout() {
         <Route path="/products/amazon" element={<ProductAmazon />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/features/whitebox-ai" element={<WhiteBoxAI />} />
+        <Route path="/features/unified-dashboard" element={<UnifiedDashboard />} />
+        <Route path="/features/intelligence-hub" element={<IntelligenceHub />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       {!hideChrome && <Footer />}
     </>
