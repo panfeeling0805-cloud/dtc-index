@@ -91,37 +91,74 @@ export default function ProductTikTok() {
             </ul>
           </div>
 
-          {/* Right — stat cards */}
-          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {/* Auto Reply Dashboard label */}
-            <div style={{
-              background: 'white', borderRadius: 16,
-              boxShadow: '0 4px 32px rgba(27,110,243,0.12)',
-              padding: '20px 24px', border: '1px solid #f0f4ff',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-                <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 8 }}>Auto Reply Dashboard</span>
+          {/* Right — Live Comment Analysis */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: 460, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              {/* Title bar */}
+              <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+                </div>
+                <span style={{ fontSize: 13, fontWeight: 500, flex: 1, textAlign: 'center', paddingRight: 54, color: '#6D28D9' }}>Live Comment Analysis</span>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {[
-                  { label: 'Auto-replied 24 comments', sub: 'in the last hour', icon: '💬', color: '#EAF1FF', iconColor: '#1B6EF3' },
-                  { label: 'Generated 100 new conversations', sub: 'this week', icon: '🔗', color: '#f0fdf4', iconColor: '#22c55e' },
-                  { label: 'Engagement rate increased by 34%', sub: 'vs last period', icon: '📈', color: '#fff7ed', iconColor: '#f97316' },
-                ].map((card) => (
-                  <div key={card.label} style={{
-                    display: 'flex', alignItems: 'center', gap: 12,
-                    background: card.color, borderRadius: 10, padding: '12px 14px',
-                  }}>
-                    <span style={{ fontSize: 18 }}>{card.icon}</span>
-                    <div>
-                      <div style={{ fontSize: 13, fontWeight: 700, color: '#0D1B2A' }}>{card.label}</div>
-                      <div style={{ fontSize: 11, color: '#6B7A8D', marginTop: 2 }}>{card.sub}</div>
+              {/* Body */}
+              <div style={{ padding: 12 }}>
+                <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '4px 0' }}>
+                  {[
+                    {
+                      label: 'PURCHASE INTENT',
+                      value: 'Detected 12 purchase intent signals',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="4" y="10" width="18" height="13" rx="2.5" stroke="url(#g1)" strokeWidth="1.5"/>
+                          <path d="M9 10V8a4 4 0 018 0v2" stroke="url(#g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M10.5 16h5M13 14v4" stroke="url(#g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'AUDIENCE INTEREST',
+                      value: 'Audience interest: 89% product demo',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="3" y="6" width="20" height="14" rx="2.5" stroke="url(#g2)" strokeWidth="1.5"/>
+                          <path d="M9 13.5l3 3 5-6" stroke="url(#g2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'SENTIMENT',
+                      value: 'Sentiment analysis: 94% positive',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <circle cx="13" cy="13" r="9.5" stroke="url(#g3)" strokeWidth="1.5"/>
+                          <path d="M9 16c1 1.4 2.4 2.2 4 2.2s3-.8 4-2.2" stroke="url(#g3)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <circle cx="10.5" cy="11.5" r="1.2" fill="#7C3AED"/>
+                          <circle cx="15.5" cy="11.5" r="1.2" fill="#2563EB"/>
+                        </svg>
+                      ),
+                    },
+                  ].map((row, i) => (
+                    <div key={row.label} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', borderTop: i > 0 ? '0.5px solid rgba(130,120,240,0.12)' : 'none' }}>
+                      <div style={{ width: 52, height: 52, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, background: 'linear-gradient(135deg,#EDE9FE,#DBEAFE)' }}>
+                        {row.icon}
+                      </div>
+                      <div>
+                        <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase' as const, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1.2 }}>
+                          {row.label}
+                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 400, lineHeight: 1.4, color: '#7777aa', marginTop: 4 }}>
+                          {row.value}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -131,28 +168,74 @@ export default function ProductTikTok() {
       {/* ── DECODE LIVESTREAM ── */}
       <section style={{ padding: '0 48px 96px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
-          {/* Left — live content analysis card */}
-          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.12)', padding: '24px', border: '1px solid #f0f4ff' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 8 }}>Live Content Analysis</span>
-              <span style={{ marginLeft: 'auto', background: '#fee2e2', color: '#ef4444', fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 100 }}>● LIVE</span>
-            </div>
-            {[
-              { icon: '🛒', label: 'Detected 18 purchase intent signals', color: '#EAF1FF' },
-              { icon: '🎯', label: 'Audience intent: 68% decision stage', color: '#f0fdf4' },
-              { icon: '😊', label: 'Sentiment analysis: 84% positive', color: '#fff7ed' },
-            ].map((item) => (
-              <div key={item.label} style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                background: item.color, borderRadius: 10, padding: '11px 14px', marginBottom: 10,
-              }}>
-                <span style={{ fontSize: 18 }}>{item.icon}</span>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#0D1B2A' }}>{item.label}</span>
+          {/* Left — Live Comment Analysis widget */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: 460, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+                </div>
+                <span style={{ fontSize: 13, fontWeight: 500, flex: 1, textAlign: 'center', paddingRight: 54, color: '#6D28D9' }}>Live Comment Analysis</span>
               </div>
-            ))}
+              <div style={{ padding: 12 }}>
+                <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '4px 0' }}>
+                  {[
+                    {
+                      label: 'PURCHASE INTENT',
+                      value: 'Detected 12 purchase intent signals',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="lca-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="4" y="10" width="18" height="13" rx="2.5" stroke="url(#lca-g1)" strokeWidth="1.5"/>
+                          <path d="M9 10V8a4 4 0 018 0v2" stroke="url(#lca-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M10.5 16h5M13 14v4" stroke="url(#lca-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'AUDIENCE INTEREST',
+                      value: 'Audience interest: 89% product demo',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="lca-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="3" y="6" width="20" height="14" rx="2.5" stroke="url(#lca-g2)" strokeWidth="1.5"/>
+                          <path d="M9 13.5l3 3 5-6" stroke="url(#lca-g2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'SENTIMENT',
+                      value: 'Sentiment analysis: 94% positive',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="lca-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <circle cx="13" cy="13" r="9.5" stroke="url(#lca-g3)" strokeWidth="1.5"/>
+                          <path d="M9 16c1 1.4 2.4 2.2 4 2.2s3-.8 4-2.2" stroke="url(#lca-g3)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <circle cx="10.5" cy="11.5" r="1.2" fill="#7C3AED"/>
+                          <circle cx="15.5" cy="11.5" r="1.2" fill="#2563EB"/>
+                        </svg>
+                      ),
+                    },
+                  ].map((row, i) => (
+                    <div key={row.label} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', borderTop: i > 0 ? '0.5px solid rgba(130,120,240,0.12)' : 'none' }}>
+                      <div style={{ width: 52, height: 52, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, background: 'linear-gradient(135deg,#EDE9FE,#DBEAFE)' }}>
+                        {row.icon}
+                      </div>
+                      <div>
+                        <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase' as const, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1.2 }}>
+                          {row.label}
+                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 400, lineHeight: 1.4, color: '#7777aa', marginTop: 4 }}>
+                          {row.value}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right */}
@@ -209,28 +292,72 @@ export default function ProductTikTok() {
             </ul>
           </div>
 
-          {/* Right — campaign performance card */}
-          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.12)', padding: '24px', border: '1px solid #f0f4ff' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 8 }}>Campaign Performance</span>
-            </div>
-            {[
-              { icon: '🎯', label: 'ROAS 4.2x above target', color: '#f0fdf4', badge: '+42%', badgeColor: '#22c55e' },
-              { icon: '🎵', label: 'Trending music library 500+ tracks', color: '#EAF1FF', badge: 'Updated', badgeColor: '#1B6EF3' },
-              { icon: '#️⃣', label: 'Smart hashtags: 85% engagement boost', color: '#fff7ed', badge: 'AI Pick', badgeColor: '#f97316' },
-            ].map((item) => (
-              <div key={item.label} style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                background: item.color, borderRadius: 10, padding: '12px 14px', marginBottom: 10,
-              }}>
-                <span style={{ fontSize: 18 }}>{item.icon}</span>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#0D1B2A', flex: 1 }}>{item.label}</span>
-                <span style={{ fontSize: 10, fontWeight: 700, color: item.badgeColor, background: 'white', padding: '3px 8px', borderRadius: 100 }}>{item.badge}</span>
+          {/* Right — Campaign Performance widget */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: 460, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+                </div>
+                <span style={{ fontSize: 13, fontWeight: 500, flex: 1, textAlign: 'center', paddingRight: 54, color: '#6D28D9' }}>Campaign Performance</span>
               </div>
-            ))}
+              <div style={{ padding: 12 }}>
+                <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '4px 0' }}>
+                  {[
+                    {
+                      label: 'ROAS',
+                      value: 'ROAS: 4.2x above target',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="cp-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="3" y="3" width="20" height="20" rx="3" stroke="url(#cp-g1)" strokeWidth="1.5"/>
+                          <path d="M7 19l4.5-5.5 3.5 3.5 4-7" stroke="url(#cp-g1)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'TRENDING MUSIC LIBRARY',
+                      value: 'Trending music library: 500+ tracks',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="cp-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <circle cx="13" cy="13" r="9.5" stroke="url(#cp-g2)" strokeWidth="1.5"/>
+                          <circle cx="13" cy="13" r="4.5" stroke="url(#cp-g2)" strokeWidth="1.5"/>
+                          <path d="M13 3.5v3M13 19.5v3M3.5 13h3M19.5 13h3" stroke="url(#cp-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                      ),
+                    },
+                    {
+                      label: 'SMART HASHTAGS',
+                      value: 'Smart hashtags: 89% engagement boost',
+                      icon: (
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                          <defs><linearGradient id="cp-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <rect x="3" y="3" width="20" height="20" rx="3" stroke="url(#cp-g3)" strokeWidth="1.5"/>
+                          <path d="M8 19v-5M12 19V9M16 19v-6M20 19v-3" stroke="url(#cp-g3)" strokeWidth="1.5" strokeLinecap="round"/>
+                        </svg>
+                      ),
+                    },
+                  ].map((row, i) => (
+                    <div key={row.label} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', borderTop: i > 0 ? '0.5px solid rgba(130,120,240,0.12)' : 'none' }}>
+                      <div style={{ width: 52, height: 52, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, background: 'linear-gradient(135deg,#EDE9FE,#DBEAFE)' }}>
+                        {row.icon}
+                      </div>
+                      <div>
+                        <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase' as const, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1.2 }}>
+                          {row.label}
+                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 400, lineHeight: 1.4, color: '#7777aa', marginTop: 4 }}>
+                          {row.value}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
