@@ -83,8 +83,9 @@ export default function ProductAmazon() {
 
       {/* ── SECTION 1: Focus on strategy ── */}
       <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left — Campaign Strategy Dashboard widget */}
+          <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
             {/* Title bar */}
             <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
@@ -128,6 +129,7 @@ export default function ProductAmazon() {
               <span style={{ fontSize: 15, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>Manage strategies, not spreadsheets.</span>
             </div>
           </div>
+          </div>
 
           {/* Right */}
           <div>
@@ -152,7 +154,7 @@ export default function ProductAmazon() {
 
       {/* ── SECTION 2: Transparent strategies ── */}
       <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
@@ -237,30 +239,112 @@ export default function ProductAmazon() {
 
       {/* ── SECTION 3: Reusable asset ── */}
       <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
-          {/* Left — asset library mockup */}
-          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
-            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Dashboard Hub / Asset Library</span>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
+          {/* Left — Intelligence Hub / Asset Library widget */}
+          <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+          <div style={{ width: 500, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+            {/* Title bar */}
+            <div style={{ padding: '13px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }}>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+              </div>
+              <span style={{ fontSize: 14, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, color: '#fff', letterSpacing: '0.01em' }}>Intelligence Hub - Asset Library</span>
             </div>
-            <div style={{ padding: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-              {[
-                { icon: '🔑', label: 'Keyword Library', color: '#EAF1FF', textColor: '#1B6EF3' },
-                { icon: '📦', label: 'Product Database', color: '#f0fdf4', textColor: '#16a34a' },
-                { icon: '🧠', label: 'Strategy Intelligence', color: '#fdf4ff', textColor: '#9333ea' },
-                { icon: '🏷️', label: 'Tags Library', color: '#fff7ed', textColor: '#f97316' },
-                { icon: '📋', label: 'Strategy Templates', color: '#f0fdf4', textColor: '#16a34a' },
-                { icon: '⚡', label: 'Campaign Tactics', color: '#EAF1FF', textColor: '#1B6EF3' },
-              ].map(item => (
-                <div key={item.label} style={{ background: item.color, borderRadius: 12, padding: '14px', display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <span style={{ fontSize: 20 }}>{item.icon}</span>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: item.textColor, fontFamily: "'Sora', sans-serif" }}>{item.label}</span>
+            {/* Body */}
+            <div style={{ padding: 14 }}>
+              <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.15)', padding: 14, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                {/* Keywords Library */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <circle cx="11" cy="11" r="7.5" stroke="url(#al-g1)" strokeWidth="1.5"/>
+                      <path d="M17 17L22 22" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M8 11h6M11 8v6" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Keywords Library</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Proven search terms & negatives</span>
+                  </div>
                 </div>
-              ))}
+                {/* Product Database */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <rect x="5" y="8" width="16" height="13" rx="2.5" stroke="url(#al-g2)" strokeWidth="1.5"/>
+                      <path d="M9 8V6a4 4 0 018 0v2" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M9 14h8" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Product Database</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Item-level performance history</span>
+                  </div>
+                </div>
+                {/* Strategy Intelligence */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <circle cx="13" cy="13" r="9" stroke="url(#al-g3)" strokeWidth="1.5"/>
+                      <path d="M13 7v2M13 17v2M7 13H5M21 13h-2" stroke="url(#al-g3)" strokeWidth="1.5" strokeLinecap="round"/>
+                      <circle cx="13" cy="13" r="3" stroke="url(#al-g3)" strokeWidth="1.5"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Strategy Intelligence</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Saved playbooks & best practices</span>
+                  </div>
+                </div>
+                {/* Tags Library */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g4" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <path d="M3 13.5L10 6.5H21v10.5L14 24 3 13.5z" stroke="url(#al-g4)" strokeWidth="1.5" strokeLinejoin="round"/>
+                      <circle cx="16.5" cy="10.5" r="1.5" fill="url(#al-g4)"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Tags Library</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>2,000+ smart labels across metrics</span>
+                  </div>
+                </div>
+                {/* Bidding Strategies */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g5" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <circle cx="13" cy="13" r="9" stroke="url(#al-g5)" strokeWidth="1.5"/>
+                      <path d="M13 8v1.5M13 16.5V18M10.5 11.5C10.5 10.1 11.6 9 13 9s2.5 1.1 2.5 2.5c0 1.5-2.5 3-2.5 3s-2.5-1.5-2.5-3zM11 15h4" stroke="url(#al-g5)" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Bidding Strategies</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Rules & AI-tested adjustments</span>
+                  </div>
+                </div>
+                {/* Campaign Tactics */}
+                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                      <defs><linearGradient id="al-g6" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                      <rect x="4" y="4" width="18" height="18" rx="3" stroke="url(#al-g6)" strokeWidth="1.5"/>
+                      <path d="M8 10h10M8 13h7M8 16h5" stroke="url(#al-g6)" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Campaign Tactics</span>
+                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Seasonal & platform-specific playbooks</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
           </div>
 
           {/* Right */}
@@ -294,7 +378,7 @@ export default function ProductAmazon() {
           backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
           backgroundSize: '32px 32px', pointerEvents: 'none',
         }} />
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center', position: 'relative', zIndex: 1 }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
           {/* Left */}
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
@@ -312,49 +396,62 @@ export default function ProductAmazon() {
             </p>
           </div>
 
-          {/* Right — custom model cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 16, padding: '20px', overflow: 'hidden' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-                <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.7)', marginLeft: 8 }}>Custom Model Training Cards</span>
+          {/* Right — Custom Model Training Dashboard widget */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+            {/* Title bar */}
+            <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }}>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-                <span style={{ fontSize: 13, fontWeight: 600, color: 'white' }}>Model Training Status</span>
-                <span style={{ fontSize: 10, fontWeight: 700, color: '#22c55e', background: 'rgba(34,197,94,0.15)', padding: '3px 8px', borderRadius: 100 }}>● Active</span>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 12px', marginBottom: 6 }}>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', marginBottom: 4 }}>Model: SapientiaBrand_v2.1</div>
-                <div style={{ height: 4, background: 'rgba(255,255,255,0.08)', borderRadius: 100 }}>
-                  <div style={{ width: '78%', height: '100%', background: 'linear-gradient(90deg, #1B6EF3, #7C3AED)', borderRadius: 100 }} />
+              <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, color: '#fff' }}>Custom Model Training Dashboard</span>
+            </div>
+            {/* Body */}
+            <div style={{ padding: 14 }}>
+              <div style={{ background: 'rgba(255,255,255,0.82)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '20px 20px 16px' }}>
+                {/* Header */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                  <div style={{ width: 26, height: 26, borderRadius: 7, background: 'linear-gradient(135deg,#7C3AED,#2563EB)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="white" strokeWidth="1.5"/><path d="M4.5 7l2 2 3-3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <span style={{ fontSize: 16, fontWeight: 800, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Model Training Status</span>
                 </div>
-                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', marginTop: 4 }}>Training: 78% complete</div>
+                {/* Model name */}
+                <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', lineHeight: 1.4, marginBottom: 14 }}>Custom Model: SportswearBrand_v2.1</div>
+                {/* Progress bar */}
+                <div style={{ marginBottom: 8 }}>
+                  <div style={{ background: 'rgba(219,234,254,0.6)', borderRadius: 99, height: 10, overflow: 'hidden', border: '0.5px solid rgba(99,102,241,0.2)' }}>
+                    <div style={{ height: '100%', width: '85%', borderRadius: 99, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }} />
+                  </div>
+                  <div style={{ fontSize: 11.5, color: '#9999bb', marginTop: 6, lineHeight: 1.5 }}><strong style={{ color: '#7777aa', fontWeight: 600 }}>Training Progress: 85%</strong> · 2.3M data points processed</div>
+                </div>
+                {/* Divider */}
+                <div style={{ height: 0.5, background: 'rgba(130,120,240,0.15)', margin: '16px 0 12px' }} />
+                {/* Performance Improvement card */}
+                <div style={{ borderRadius: 11, padding: '14px 16px', background: 'rgba(219,234,254,0.55)', border: '0.5px solid rgba(99,102,241,0.2)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 6 }}>
+                    <div style={{ width: 22, height: 22, borderRadius: 6, background: 'linear-gradient(135deg,#60A5FA,#6366F1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1.5 9l3-3.5 2 2L10 3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3h2v2" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <span style={{ fontSize: 13, fontWeight: 800, background: 'linear-gradient(90deg,#6366F1,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Performance Improvement</span>
+                  </div>
+                  <div style={{ fontSize: 12.5, color: '#4a4a8a' }}><strong style={{ color: '#2a2a6a' }}>vs Standard Model:</strong> <span style={{ color: '#3B3BAA', fontWeight: 700 }}>+23% ROAS</span>, <span style={{ color: '#3B3BAA', fontWeight: 700 }}>+15% conversion accuracy</span>, <span style={{ color: '#3B3BAA', fontWeight: 700 }}>-12% wasted spend</span></div>
+                </div>
+                {/* Privacy Protected card */}
+                <div style={{ borderRadius: 11, padding: '14px 16px', background: 'rgba(219,234,254,0.55)', border: '0.5px solid rgba(99,102,241,0.2)', marginTop: 8 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 6 }}>
+                    <div style={{ width: 22, height: 22, borderRadius: 6, background: 'linear-gradient(135deg,#60A5FA,#6366F1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2.5" y="5" width="7" height="5.5" rx="1.5" stroke="white" strokeWidth="1.3"/><path d="M4 5V3.5a2 2 0 014 0V5" stroke="white" strokeWidth="1.3" strokeLinecap="round"/></svg>
+                    </div>
+                    <span style={{ fontSize: 13, fontWeight: 800, background: 'linear-gradient(90deg,#6366F1,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Privacy Protected</span>
+                  </div>
+                  <div style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.55 }}>Your data never leaves your environment · Federated learning · SOC 2 compliant</div>
+                </div>
               </div>
             </div>
-
-            <div style={{ background: 'rgba(27,110,243,0.12)', border: '1px solid rgba(27,110,243,0.25)', borderRadius: 16, padding: '18px' }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: '#a5c4ff', marginBottom: 10 }}>📈 Performance Improvement</div>
-              <div style={{ display: 'flex', gap: 12 }}>
-                <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 10, padding: '10px', textAlign: 'center' }}>
-                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, color: '#22c55e' }}>+41%</div>
-                  <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>ROAS uplift</div>
-                </div>
-                <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: 10, padding: '10px', textAlign: 'center' }}>
-                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, color: '#a5c4ff' }}>-29%</div>
-                  <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>ACOS drop</div>
-                </div>
-              </div>
-            </div>
-
-            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: '18px', display: 'flex', alignItems: 'center', gap: 12 }}>
-              <span style={{ fontSize: 22 }}>🔒</span>
-              <div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: 'white', marginBottom: 3 }}>Privacy Protected</div>
-                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>Your training data never leaves your environment. Fully isolated model deployment.</div>
-              </div>
-            </div>
+          </div>
           </div>
         </div>
       </section>
