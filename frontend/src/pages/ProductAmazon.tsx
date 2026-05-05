@@ -170,30 +170,65 @@ export default function ProductAmazon() {
             </p>
           </div>
 
-          {/* Right — audience dashboard mockup */}
-          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
-            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Strategy Audience Dashboard</span>
-            </div>
-            <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-              <div style={{ background: '#f0fdf4', borderRadius: 12, padding: '14px 16px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#16a34a', marginBottom: 8 }}>✓ Recommendation Applied</div>
-                <p style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500 }}>Increased bid for "wireless headphones" by <strong>15%</strong></p>
-                <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
-                  <div style={{ background: 'white', borderRadius: 8, padding: '6px 12px', fontSize: 11, color: '#22c55e', fontWeight: 700 }}>CTR +22%</div>
-                  <div style={{ background: 'white', borderRadius: 8, padding: '6px 12px', fontSize: 11, color: '#1B6EF3', fontWeight: 700 }}>Rank #3 → #1</div>
+          {/* Right — Strategy Explanation Dashboard widget */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              {/* Title bar */}
+              <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
                 </div>
+                <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  Strategy Explanation Dashboard
+                </span>
               </div>
-              <div style={{ background: '#fff7ed', borderRadius: 12, padding: '14px 16px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#f97316', marginBottom: 8 }}>⏳ Pending Action</div>
-                <p style={{ fontSize: 13, color: '#0D1B2A' }}>Pause keyword "cheap earphones" — ACOS 68%, below threshold</p>
-              </div>
-              <div style={{ background: '#EAF1FF', borderRadius: 12, padding: '14px 16px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', marginBottom: 8 }}>📈 Strategy Impact Forecast</div>
-                <p style={{ fontSize: 13, color: '#0D1B2A' }}>Projected ACOS reduction: <strong>-8%</strong> · Budget reallocation: <strong>$340</strong></p>
+              {/* Body */}
+              <div style={{ padding: 14 }}>
+                <div style={{ background: 'rgba(255,255,255,0.82)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '20px 20px 16px' }}>
+                  {/* Main header */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                    <div style={{ width: 26, height: 26, borderRadius: 7, background: 'linear-gradient(135deg,#34D399,#10B981)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </div>
+                    <span style={{ fontSize: 16, fontWeight: 800, background: 'linear-gradient(90deg,#10B981,#059669)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Recommendation Applied</span>
+                  </div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a2e', lineHeight: 1.4, marginBottom: 10 }}>
+                    Increased bid for "wireless headphones" by 18%
+                  </div>
+                  <div style={{ fontSize: 12, color: '#9999bb', lineHeight: 1.6 }}>
+                    <strong style={{ color: '#7777aa', fontWeight: 600 }}>Reasoning:</strong> CTR increased 34% over 7 days, conversion rate stable at 12.3%, competitors bidding 15% higher on similar terms
+                  </div>
+                  {/* Divider */}
+                  <div style={{ height: 0.5, background: 'rgba(130,120,240,0.15)', margin: '16px 0 12px' }} />
+                  {/* Case cards */}
+                  {[
+                    {
+                      icon: <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="white" strokeWidth="1.3"/><path d="M6 3v3.5l1.5 1.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                      title: 'Pending Action',
+                      main: 'Pause 23 underperforming keywords',
+                      sub: <><strong style={{ color: '#7777aa', fontWeight: 600 }}>Logic:</strong> ACOS &gt; 50% for 14+ days, zero conversions, search volume declining 25%</>,
+                    },
+                    {
+                      icon: <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1.5 9l3-3.5 2 2L10 3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 3h2v2" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                      title: 'Strategy Impact Forecast',
+                      main: null,
+                      sub: <>Expected ACOS reduction: <span style={{ color: '#3B3BAA', fontWeight: 700 }}>-8.5%</span> &nbsp;|&nbsp; Budget reallocation: <span style={{ color: '#3B3BAA', fontWeight: 700 }}>$1,247</span></>,
+                    },
+                  ].map((card, i) => (
+                    <div key={i} style={{ borderRadius: 11, padding: '14px 16px', background: 'rgba(219,234,254,0.55)', border: '0.5px solid rgba(99,102,241,0.2)', marginTop: i > 0 ? 8 : 0 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 6 }}>
+                        <div style={{ width: 22, height: 22, borderRadius: 6, background: 'linear-gradient(135deg,#60A5FA,#6366F1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          {card.icon}
+                        </div>
+                        <span style={{ fontSize: 13, fontWeight: 800, background: 'linear-gradient(90deg,#6366F1,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{card.title}</span>
+                      </div>
+                      {card.main && <div style={{ fontSize: 13, fontWeight: 600, color: '#2a2a4a', marginBottom: 5, lineHeight: 1.4 }}>{card.main}</div>}
+                      <div style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.55 }}>{card.sub}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
