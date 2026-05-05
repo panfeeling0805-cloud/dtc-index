@@ -36,42 +36,46 @@ export default function ProductAmazon() {
           Book a Demo
         </CtaLink>
 
-        {/* Dashboard mockup */}
-        <div style={{
-          maxWidth: 720, margin: '56px auto 0',
-          background: 'white', borderRadius: 20,
-          boxShadow: '0 8px 48px rgba(27,110,243,0.13)',
-          border: '1px solid #e4eeff', overflow: 'hidden',
-        }}>
-          {/* Window chrome */}
-          <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-            <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 10 }}>Campaign Analytics</span>
+        {/* Campaign Analytics widget */}
+        <div style={{ maxWidth: 720, margin: '56px auto 0', borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+          {/* Title bar — gradient bg */}
+          <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }}>
+            <div style={{ display: 'flex', gap: 6 }}>
+              <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+              <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+              <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+            </div>
+            <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, color: '#fff' }}>Campaign Analytics</span>
           </div>
-          <div style={{ padding: '24px', display: 'grid', gridTemplateColumns: '1fr 1fr 1.4fr', gap: 16, alignItems: 'start' }}>
-            {/* ACOS metric */}
-            <div style={{ background: '#fff0f0', borderRadius: 14, padding: '18px' }}>
-              <div style={{ fontSize: 11, color: '#6B7A8D', fontWeight: 600, marginBottom: 8 }}>ACOS Reduction</div>
-              <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 32, fontWeight: 800, color: '#ef4444' }}>-32%</div>
-              <div style={{ fontSize: 11, color: '#6B7A8D', marginTop: 4 }}>vs last period</div>
-            </div>
-            {/* PPC Growth metric */}
-            <div style={{ background: '#f0fdf4', borderRadius: 14, padding: '18px' }}>
-              <div style={{ fontSize: 11, color: '#6B7A8D', fontWeight: 600, marginBottom: 8 }}>PPC Growth</div>
-              <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 32, fontWeight: 800, color: '#22c55e' }}>+187%</div>
-              <div style={{ fontSize: 11, color: '#6B7A8D', marginTop: 4 }}>revenue increase</div>
-            </div>
-            {/* AI Recommendation */}
-            <div style={{ background: '#EAF1FF', borderRadius: 14, padding: '18px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
-                <span style={{ fontSize: 14 }}>✦</span>
-                <span style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', fontFamily: "'Sora', sans-serif" }}>AI Recommendation</span>
+          {/* Body */}
+          <div style={{ padding: 14 }}>
+            <div style={{ background: 'rgba(255,255,255,0.82)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: 16, display: 'flex', gap: 12, alignItems: 'stretch' }}>
+              {/* ACOS Reduction */}
+              <div style={{ flex: 1, borderRadius: 11, padding: 16, background: 'rgba(254,226,226,0.6)', border: '0.5px solid rgba(248,113,113,0.25)', display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9999bb' }}>ACOS Reduction</div>
+                <div style={{ fontSize: 32, fontWeight: 800, lineHeight: 1.1, background: 'linear-gradient(90deg,#EF4444,#DC2626)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>-32%</div>
+                <div style={{ fontSize: 11, color: '#aaaacc' }}>vs last period</div>
               </div>
-              <p style={{ fontSize: 12, color: '#0D1B2A', lineHeight: 1.6 }}>
-                Increase bid to 15% for <strong>"running shoes"</strong> to improve organic ranking
-              </p>
+              {/* PPC Growth */}
+              <div style={{ flex: 1, borderRadius: 11, padding: 16, background: 'rgba(209,250,229,0.6)', border: '0.5px solid rgba(52,211,153,0.25)', display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#9999bb' }}>PPC Growth</div>
+                <div style={{ fontSize: 32, fontWeight: 800, lineHeight: 1.1, background: 'linear-gradient(90deg,#10B981,#059669)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>+187%</div>
+                <div style={{ fontSize: 11, color: '#aaaacc' }}>revenue increase</div>
+              </div>
+              {/* Divider */}
+              <div style={{ width: 0.5, background: 'rgba(130,120,240,0.15)', flexShrink: 0 }} />
+              {/* AI Recommendation */}
+              <div style={{ flex: 1.3, padding: '4px 6px', display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <div style={{ width: 24, height: 24, borderRadius: 7, background: 'linear-gradient(135deg,#60A5FA,#6366F1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.3 3.2H10L7.6 6.1l.9 3L6 7.6 3.5 9.1l.9-3L2 4.2h2.7L6 1z" fill="white"/></svg>
+                  </div>
+                  <span style={{ fontSize: 14, fontWeight: 800, background: 'linear-gradient(90deg,#6366F1,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>AI Recommendation</span>
+                </div>
+                <div style={{ fontSize: 13, color: '#4a4a8a', lineHeight: 1.6 }}>
+                  Increase bid to 15% for <strong style={{ color: '#2a2a6a', fontWeight: 700 }}>"running shoes"</strong> to improve organic ranking
+                </div>
+              </div>
             </div>
           </div>
         </div>
