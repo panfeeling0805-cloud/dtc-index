@@ -65,7 +65,7 @@ export default function ProductTikTok() {
 
       {/* ── AMPLIFY ENGAGEMENT ── */}
       <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
@@ -91,55 +91,52 @@ export default function ProductTikTok() {
             </ul>
           </div>
 
-          {/* Right — Live Comment Analysis */}
+          {/* Right — Auto Reply Dashboard */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ width: 460, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
-              {/* Title bar */}
               <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
                 <div style={{ display: 'flex', gap: 6 }}>
                   <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
                   <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
                   <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
                 </div>
-                <span style={{ fontSize: 13, fontWeight: 500, flex: 1, textAlign: 'center', paddingRight: 54, color: '#6D28D9' }}>Live Comment Analysis</span>
+                <span style={{ fontSize: 13, fontWeight: 500, flex: 1, textAlign: 'center', paddingRight: 54, color: '#6D28D9' }}>Auto Reply Dashboard</span>
               </div>
-              {/* Body */}
               <div style={{ padding: 12 }}>
                 <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '4px 0' }}>
                   {[
                     {
-                      label: 'PURCHASE INTENT',
-                      value: 'Detected 12 purchase intent signals',
+                      label: 'AUTO-RESPONSE',
+                      value: 'Auto-replied to 24 comments in the last hour',
                       icon: (
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                          <defs><linearGradient id="g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                          <rect x="4" y="10" width="18" height="13" rx="2.5" stroke="url(#g1)" strokeWidth="1.5"/>
-                          <path d="M9 10V8a4 4 0 018 0v2" stroke="url(#g1)" strokeWidth="1.5" strokeLinecap="round"/>
-                          <path d="M10.5 16h5M13 14v4" stroke="url(#g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <defs><linearGradient id="ard-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <path d="M5 6.5A2.5 2.5 0 017.5 4h11A2.5 2.5 0 0121 6.5v8A2.5 2.5 0 0118.5 17H14l-4 4v-4H7.5A2.5 2.5 0 015 14.5v-8z" stroke="url(#ard-g1)" strokeWidth="1.5" strokeLinejoin="round"/>
+                          <path d="M9 10h8M9 13h5" stroke="url(#ard-g1)" strokeWidth="1.5" strokeLinecap="round"/>
                         </svg>
                       ),
                     },
                     {
-                      label: 'AUDIENCE INTEREST',
-                      value: 'Audience interest: 89% product demo',
+                      label: 'NEW CONVERSATIONS',
+                      value: 'Generated 100 new conversations this week',
                       icon: (
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                          <defs><linearGradient id="g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                          <rect x="3" y="6" width="20" height="14" rx="2.5" stroke="url(#g2)" strokeWidth="1.5"/>
-                          <path d="M9 13.5l3 3 5-6" stroke="url(#g2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          <defs><linearGradient id="ard-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <path d="M10 8a3 3 0 100 6 3 3 0 000-6z" stroke="url(#ard-g2)" strokeWidth="1.5"/>
+                          <path d="M16 8a3 3 0 110 6" stroke="url(#ard-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M4 20c0-2.8 2.7-5 6-5s6 2.2 6 5" stroke="url(#ard-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M20 15c1.7.8 2.9 2.3 2.9 4" stroke="url(#ard-g2)" strokeWidth="1.5" strokeLinecap="round"/>
                         </svg>
                       ),
                     },
                     {
-                      label: 'SENTIMENT',
-                      value: 'Sentiment analysis: 94% positive',
+                      label: 'ENGAGEMENT RATE',
+                      value: 'Engagement rate increased by 34% vs last period',
                       icon: (
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                          <defs><linearGradient id="g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                          <circle cx="13" cy="13" r="9.5" stroke="url(#g3)" strokeWidth="1.5"/>
-                          <path d="M9 16c1 1.4 2.4 2.2 4 2.2s3-.8 4-2.2" stroke="url(#g3)" strokeWidth="1.5" strokeLinecap="round"/>
-                          <circle cx="10.5" cy="11.5" r="1.2" fill="#7C3AED"/>
-                          <circle cx="15.5" cy="11.5" r="1.2" fill="#2563EB"/>
+                          <defs><linearGradient id="ard-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                          <path d="M4 18l5.5-6 4 4L20 8" stroke="url(#ard-g3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M16 8h4v4" stroke="url(#ard-g3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       ),
                     },
@@ -167,7 +164,7 @@ export default function ProductTikTok() {
 
       {/* ── DECODE LIVESTREAM ── */}
       <section style={{ padding: '0 48px 96px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left — Live Comment Analysis widget */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ width: 460, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
@@ -266,7 +263,7 @@ export default function ProductTikTok() {
 
       {/* ── RUN TRANSPARENT AI ADS ── */}
       <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
             <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
@@ -400,7 +397,7 @@ export default function ProductTikTok() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {[
             {
-              avatar: '👩‍💼',
+              avatar: '/assets/Ellipse 7.png',
               name: 'Sarah Chen',
               role: 'Beauty Creator • 50K followers',
               challenge: 'Struggled to engage with fans from different backgrounds who commented in multiple languages during live streams.',
@@ -410,7 +407,7 @@ export default function ProductTikTok() {
               accentColor: '#1B6EF3',
             },
             {
-              avatar: '🛍️',
+              avatar: '/assets/Ellipse 8.png',
               name: 'FashionForward Store',
               role: 'Fashion Brand • TikTok Shop',
               challenge: 'Low conversion rates from live streams. Product inventory couldn\'t keep up with demand spikes.',
@@ -420,7 +417,7 @@ export default function ProductTikTok() {
               accentColor: '#22c55e',
             },
             {
-              avatar: '🎵',
+              avatar: '/assets/Ellipse 9.png',
               name: 'MusicMakers Agency',
               role: 'Music Label • TikTok Promotions',
               challenge: 'Managing campaigns for multiple artists simultaneously with limited team bandwidth.',
@@ -438,9 +435,7 @@ export default function ProductTikTok() {
             }}>
               {/* Header */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: story.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, flexShrink: 0 }}>
-                  {story.avatar}
-                </div>
+                <img src={story.avatar} alt={story.name} style={{ width: 48, height: 48, borderRadius: 14, objectFit: 'cover', flexShrink: 0 }} />
                 <div>
                   <div style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 15, color: '#0D1B2A' }}>{story.name}</div>
                   <div style={{ fontSize: 12, color: '#6B7A8D', marginTop: 2 }}>{story.role}</div>
