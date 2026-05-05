@@ -80,36 +80,48 @@ export default function ProductAmazon() {
       {/* ── SECTION 1: Focus on strategy ── */}
       <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
-          {/* Left — strategy dashboard mockup */}
-          <div style={{ background: 'white', borderRadius: 20, boxShadow: '0 4px 32px rgba(27,110,243,0.10)', border: '1px solid #e4eeff', overflow: 'hidden' }}>
-            <div style={{ background: '#f4f7fb', padding: '12px 16px', borderBottom: '1px solid #e4eeff', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 8 }}>Campaign Strategy Dashboard</span>
+          {/* Left — Campaign Strategy Dashboard widget */}
+          <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+            {/* Title bar */}
+            <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+              </div>
+              <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                Campaign Strategy Dashboard
+              </span>
             </div>
-            <div style={{ padding: '20px' }}>
+            {/* Body */}
+            <div style={{ padding: 14 }}>
+              {/* Tags */}
+              <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: 16, display: 'flex', flexWrap: 'wrap' as const, gap: 10, marginBottom: 12 }}>
+                {['High-CTR Products', 'Low-Converting Terms', 'Seasonal Keywords', 'Budget Optimized', 'Performance Signal'].map(tag => (
+                  <span key={tag} style={{ padding: '8px 16px', borderRadius: 999, border: '1.5px solid rgba(100,120,240,0.35)', fontSize: 13, fontWeight: 600, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', whiteSpace: 'nowrap' as const }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {/* Cards */}
               {[
-                { label: 'High-CTR Headphones', tag: 'Auto', tagColor: '#1B6EF3', tagBg: '#EAF1FF' },
-                { label: 'Keyword: wireless earbuds', tag: 'Active', tagColor: '#22c55e', tagBg: '#f0fdf4' },
-                { label: 'Keyword: bluetooth speaker', tag: 'Paused', tagColor: '#f59e0b', tagBg: '#fff7ed' },
-              ].map(item => (
-                <div key={item.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid #f0f4ff' }}>
-                  <span style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500 }}>{item.label}</span>
-                  <span style={{ fontSize: 10, fontWeight: 700, color: item.tagColor, background: item.tagBg, padding: '3px 8px', borderRadius: 100 }}>{item.tag}</span>
+                { title: 'Auto-Generated Strategy', text: 'Scale high-CTR products: +25% budget allocation for running shoes category based on performance signals' },
+                { title: 'Smart Tag Filter Applied', text: 'Pause 147 low-converting terms identified by AI across 12 campaigns' },
+              ].map((card, i) => (
+                <div key={i} style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '16px 18px', marginBottom: i < 1 ? 10 : 0, position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', left: 0, top: 8, bottom: 8, width: 4, borderRadius: '0 4px 4px 0', background: 'linear-gradient(180deg,#7C3AED,#2563EB)' }} />
+                  <div style={{ paddingLeft: 12 }}>
+                    <div style={{ fontSize: 15, fontWeight: 800, letterSpacing: '0.02em', background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: 6 }}>
+                      {card.title}
+                    </div>
+                    <div style={{ fontSize: 13, color: '#7777aa', lineHeight: 1.55 }}>{card.text}</div>
+                  </div>
                 </div>
               ))}
-              <div style={{ marginTop: 16, background: '#EAF1FF', borderRadius: 10, padding: '12px 14px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', marginBottom: 6 }}>✦ Auto-Generated Strategy</div>
-                <p style={{ fontSize: 12, color: '#0D1B2A', lineHeight: 1.6 }}>Boost bids on top-performing keywords and suppress low-CTR terms to reduce wasted spend.</p>
-              </div>
-              <div style={{ marginTop: 10, background: '#f0fdf4', borderRadius: 10, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: 12 }}>🏷️</span>
-                <span style={{ fontSize: 12, fontWeight: 600, color: '#16a34a' }}>Smart Tag Filter Applied</span>
-              </div>
-              <div style={{ marginTop: 16, borderTop: '1px solid #f0f4ff', paddingTop: 12 }}>
-                <span style={{ fontSize: 11, color: '#6B7A8D', fontStyle: 'italic' }}>"Manage strategies, not spreadsheets. ⚡"</span>
-              </div>
+            </div>
+            {/* Quote banner */}
+            <div style={{ background: 'linear-gradient(90deg,#2563EB,#7C3AED)', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: 15, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>Manage strategies, not spreadsheets.</span>
             </div>
           </div>
 
