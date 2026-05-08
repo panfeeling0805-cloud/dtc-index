@@ -36,21 +36,33 @@ const CheckItem = ({ text }: { text: string }) => (
 
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => (
   <div style={{
-    background: 'linear-gradient(145deg, #0d1224 0%, #1a1a50 100%)',
+    background: 'white',
     borderRadius: 18,
-    border: '1px solid rgba(100,80,240,0.3)',
+    border: '1.5px solid transparent',
+    backgroundClip: 'padding-box',
     padding: '28px 24px',
-    boxShadow: '0 2px 24px rgba(0,0,0,0.35)',
+    boxShadow: '0 2px 20px rgba(99,102,241,0.10)',
     display: 'flex',
     flexDirection: 'column',
     gap: 14,
+    position: 'relative',
+    isolation: 'isolate',
   }}>
-    <div style={{ width: 64, height: 64, flexShrink: 0 }}>
+    {/* gradient border overlay */}
+    <div style={{
+      position: 'absolute', inset: 0, borderRadius: 18, zIndex: -1,
+      padding: 1.5,
+      background: 'linear-gradient(135deg, #7C3AED, #2563EB)',
+      WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+      WebkitMaskComposite: 'xor',
+      maskComposite: 'exclude',
+    }} />
+    <div style={{ width: 64, height: 64, flexShrink: 0, position: 'relative' }}>
       {icon}
     </div>
     <div>
-      <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: 'white', marginBottom: 8 }}>{title}</div>
-      <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)', lineHeight: 1.65 }}>{description}</div>
+      <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', marginBottom: 8 }}>{title}</div>
+      <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65 }}>{description}</div>
     </div>
   </div>
 )
@@ -75,16 +87,6 @@ export default function UnifiedDashboard() {
           pointerEvents: 'none',
         }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 800, margin: '0 auto' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(27,110,243,0.10)', border: '1px solid rgba(27,110,243,0.25)',
-            borderRadius: 100, padding: '6px 18px', marginBottom: 32,
-          }}>
-            <span style={{ fontSize: 15 }}>🖥️</span>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.07em', fontFamily: "'Sora', sans-serif" }}>
-              UNIFIED DASHBOARD
-            </span>
-          </div>
           <h1 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,
             fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: 1.1,
@@ -93,8 +95,9 @@ export default function UnifiedDashboard() {
             Manage All Your Ads from{' '}
             <span className="gradient-text">One Unified Dashboard</span>
           </h1>
-          <p style={{ fontSize: 16, color: '#6B7A8D', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.75, fontWeight: 500 }}>
-            Unify your Amazon, Google, Meta, and TikTok campaigns in one place. Track performance in real time, optimize ad spend with precision, and scale faster across every channel — all with enterprise-level controls and seamless team collaboration.
+          <p style={{ fontSize: 16, color: '#6B7A8D', maxWidth: 640, margin: '0 auto 40px', lineHeight: 1.6, fontWeight: 500 }}>
+            Unify Amazon, Google, Meta, and TikTok campaigns in one workspace.<br />
+            Track performance, optimize spend, and scale faster with enterprise-grade control and collaboration.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, flexWrap: 'wrap' }}>
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100 }}>
@@ -103,26 +106,6 @@ export default function UnifiedDashboard() {
             <CtaLink className="btn btn-ghost" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100, border: '1.5px solid #1B6EF3', color: '#1B6EF3', background: 'transparent' }}>
               Schedule Demo
             </CtaLink>
-          </div>
-
-          {/* Platform logos row */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, marginTop: 44, flexWrap: 'wrap' }}>
-            {[
-              { name: 'TikTok', icon: '♪', color: '#f0fdf4', text: '#16a34a' },
-              { name: 'Amazon', icon: '📦', color: '#fff7ed', text: '#ea580c' },
-              { name: 'Google', icon: '🔍', color: '#EAF1FF', text: '#1B6EF3' },
-              { name: 'Meta', icon: '𝕄', color: '#eff6ff', text: '#2563eb' },
-              { name: 'Instagram', icon: '📷', color: '#fdf2f8', text: '#c026d3' },
-            ].map((p) => (
-              <div key={p.name} style={{
-                display: 'flex', alignItems: 'center', gap: 7,
-                background: p.color, borderRadius: 100,
-                padding: '7px 16px', border: '1px solid rgba(0,0,0,0.06)',
-              }}>
-                <span style={{ fontSize: 14 }}>{p.icon}</span>
-                <span style={{ fontSize: 12, fontWeight: 700, color: p.text, fontFamily: "'Sora', sans-serif" }}>{p.name}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
