@@ -83,7 +83,7 @@ export default function Navbar() {
               }}>
                 {[
                   { to: '/features/whitebox-ai', label: 'White-Box AI' },
-                  { to: '/features/unified-dashboard', label: 'Unified Dashboard' },
+                  { to: '/features/unified-dashboard', label: 'Unified Campaign Workspace' },
                   { to: '/features/intelligence-hub', label: 'Intelligence Hub' },
                 ].map(item => (
                   <Link

@@ -98,7 +98,7 @@ export default function UnifiedDashboard() {
             <span className="gradient-text">One Unified Dashboard</span>
           </h1>
           <p style={{ fontSize: 16, color: '#6B7A8D', maxWidth: 600, margin: '0 auto 40px', lineHeight: 1.75, fontWeight: 500 }}>
-            TikTok, Amazon, Google, Meta, and Instagram — all in one place. Stop switching tabs and start making smarter decisions with Sapientia's centralized ad management platform.
+            Unify your Amazon, Google, Meta, and TikTok campaigns in one place. Track performance in real time, optimize ad spend with precision, and scale faster across every channel — all with enterprise-level controls and seamless team collaboration.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, flexWrap: 'wrap' }}>
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100 }}>
@@ -133,63 +133,11 @@ export default function UnifiedDashboard() {
 
       {/* ── HERO DASHBOARD MOCKUP ── */}
       <section style={{ padding: '0 48px', maxWidth: 1000, margin: '-36px auto 80px', position: 'relative', zIndex: 2 }}>
-        <div style={{
-          background: 'white',
-          borderRadius: 20,
-          boxShadow: '0 8px 60px rgba(27,110,243,0.15)',
-          border: '1px solid #e0ebff',
-          padding: '28px 32px',
-          overflow: 'hidden',
-        }}>
-          {/* Window bar */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-            <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 10 }}>Sapientia — Unified Dashboard</span>
-            <span style={{ marginLeft: 'auto', background: '#EAF1FF', color: '#1B6EF3', fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 100 }}>● All Platforms</span>
-          </div>
-          {/* Stat row */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14, marginBottom: 22 }}>
-            {[
-              { label: 'Total Spend', value: '$84,320', change: '+12% this week', color: '#EAF1FF', changeColor: '#1B6EF3' },
-              { label: 'Total Revenue', value: '$312,800', change: '+28% this week', color: '#f0fdf4', changeColor: '#22c55e' },
-              { label: 'Avg. ROAS', value: '3.71x', change: 'Across all channels', color: '#fff7ed', changeColor: '#f97316' },
-              { label: 'Active Campaigns', value: '47', change: '5 platforms', color: '#fdf4ff', changeColor: '#a855f7' },
-            ].map((stat) => (
-              <div key={stat.label} style={{ background: stat.color, borderRadius: 12, padding: '16px 18px' }}>
-                <div style={{ fontSize: 11, color: '#6B7A8D', fontWeight: 600, marginBottom: 6 }}>{stat.label}</div>
-                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 800, color: '#0D1B2A', marginBottom: 4 }}>{stat.value}</div>
-                <div style={{ fontSize: 11, color: stat.changeColor, fontWeight: 600 }}>{stat.change}</div>
-              </div>
-            ))}
-          </div>
-          {/* Campaign rows */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 12, padding: '0 12px 8px', borderBottom: '1px solid #f0f4ff' }}>
-              {['Campaign', 'Platform', 'Spend', 'ROAS', 'Status'].map((h) => (
-                <div key={h} style={{ fontSize: 10, fontWeight: 700, color: '#6B7A8D', textTransform: 'uppercase', letterSpacing: '0.07em' }}>{h}</div>
-              ))}
-            </div>
-            {[
-              { name: 'Summer Sale — Retargeting', platform: 'Meta', spend: '$12,400', roas: '4.8x', status: 'Active', statusColor: '#22c55e', statusBg: '#f0fdf4' },
-              { name: 'Product Launch — Video', platform: 'TikTok', spend: '$8,200', roas: '3.2x', status: 'Active', statusColor: '#22c55e', statusBg: '#f0fdf4' },
-              { name: 'Brand Awareness — Display', platform: 'Google', spend: '$15,600', roas: '2.9x', status: 'Paused', statusColor: '#f59e0b', statusBg: '#fffbeb' },
-              { name: 'Holiday — Sponsored', platform: 'Amazon', spend: '$22,100', roas: '5.1x', status: 'Active', statusColor: '#22c55e', statusBg: '#f0fdf4' },
-              { name: 'Influencer Boost — Stories', platform: 'Instagram', spend: '$6,800', roas: '3.6x', status: 'Active', statusColor: '#22c55e', statusBg: '#f0fdf4' },
-            ].map((row) => (
-              <div key={row.name} style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr', gap: 12, padding: '10px 12px', borderRadius: 8, background: '#fafbff', alignItems: 'center' }}>
-                <div style={{ fontSize: 13, fontWeight: 600, color: '#0D1B2A' }}>{row.name}</div>
-                <div style={{ fontSize: 12, color: '#6B7A8D' }}>{row.platform}</div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: '#0D1B2A' }}>{row.spend}</div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: '#1B6EF3' }}>{row.roas}</div>
-                <div style={{ display: 'flex' }}>
-                  <span style={{ fontSize: 10, fontWeight: 700, color: row.statusColor, background: row.statusBg, padding: '3px 10px', borderRadius: 100 }}>{row.status}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src="/assets/Group 62.png"
+          alt="Unified Campaign Workspace Dashboard"
+          style={{ width: '100%', borderRadius: 20, boxShadow: '0 8px 60px rgba(27,110,243,0.15)', display: 'block' }}
+        />
       </section>
 
       {/* ── COMMAND CENTER ── */}
