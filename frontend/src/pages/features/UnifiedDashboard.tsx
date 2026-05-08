@@ -233,112 +233,70 @@ export default function UnifiedDashboard() {
       {/* ── CENTRALIZED CONTROL ── */}
       <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-            Operational Efficiency
-          </p>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, marginBottom: 14, color: '#0D1B2A' }}>
             Centralized Control.{' '}
             <span className="gradient-text">Local Execution.</span>
           </h2>
-          <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 540, margin: '0 auto', lineHeight: 1.7 }}>
-            Deploy global strategy with the precision of local execution. Sapientia's toolkit gives you the power to standardize, automate, and scale everything.
+          <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 600, margin: '0 auto', lineHeight: 1.7 }}>
+            Define global strategies and push them across all accounts instantly. Maintain consistency while allowing local customization for regional markets and specific campaigns.
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
-          <div style={{
-            background: 'white', borderRadius: 18, border: '1px solid #EAF1FF',
-            padding: '32px 28px', boxShadow: '0 2px 16px rgba(27,110,243,0.07)',
-          }}>
-            <div style={{ width: 52, height: 52, borderRadius: 16, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, marginBottom: 18 }}>📋</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: '#0D1B2A', marginBottom: 10 }}>Strategy Template Library</div>
-            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65, marginBottom: 16 }}>
-              Build once, deploy everywhere. Save your best-performing campaign structures as reusable templates and apply them across brands, regions, or platforms instantly.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {['E-commerce Retargeting Template', 'Brand Awareness Blueprint', 'Seasonal Promo Playbook'].map((t) => (
-                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#EAF1FF', borderRadius: 8, padding: '9px 12px' }}>
-                  <span style={{ fontSize: 12, color: '#1B6EF3' }}>●</span>
-                  <span style={{ fontSize: 12, fontWeight: 600, color: '#0D1B2A' }}>{t}</span>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          <div style={{
-            background: 'white', borderRadius: 18, border: '1px solid #EAF1FF',
-            padding: '32px 28px', boxShadow: '0 2px 16px rgba(27,110,243,0.07)',
-          }}>
-            <div style={{ width: 52, height: 52, borderRadius: 16, background: '#f0fdf4', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, marginBottom: 18 }}>⚙️</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: '#0D1B2A', marginBottom: 10 }}>Bulk Rule Deployment</div>
-            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65, marginBottom: 16 }}>
-              Set automated rules once and push them across hundreds of campaigns simultaneously. Pause underperforming ads, scale winners, and protect budgets — all automatically.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {[
-                { rule: 'Pause if CPA > $25', status: 'Active on 32 campaigns', color: '#f0fdf4', statusColor: '#22c55e' },
-                { rule: 'Scale if ROAS > 4x', status: 'Active on 18 campaigns', color: '#f0fdf4', statusColor: '#22c55e' },
-                { rule: 'Alert if CTR < 1%', status: 'Monitoring 47 campaigns', color: '#fffbeb', statusColor: '#f59e0b' },
-              ].map((r) => (
-                <div key={r.rule} style={{ display: 'flex', alignItems: 'center', gap: 10, background: r.color, borderRadius: 8, padding: '9px 12px' }}>
-                  <span style={{ fontSize: 12, color: '#22c55e' }}>✓</span>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: '#0D1B2A' }}>{r.rule}</div>
-                    <div style={{ fontSize: 10, color: r.statusColor, marginTop: 1 }}>{r.status}</div>
-                  </div>
+        {/* Single bordered container with 2×2 grid */}
+        <div style={{
+          border: '1.5px solid',
+          borderColor: 'transparent',
+          borderRadius: 20,
+          padding: 2,
+          background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #7C3AED, #2563EB) border-box',
+          boxShadow: '0 2px 24px rgba(99,102,241,0.08)',
+        }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', borderRadius: 18, overflow: 'hidden' }}>
+            {[
+              {
+                rectSrc: '/assets/8/Rectangle 21.png',
+                iconSrc: '/assets/8/人工智能 (2) 1.png',
+                title: 'Strategy Template Library',
+                desc: 'Create reusable campaign templates with preset bid strategies, audience targeting, and creative guidelines.',
+              },
+              {
+                rectSrc: '/assets/9/Rectangle 22.png',
+                iconSrc: '/assets/9/用户画像 1.png',
+                title: 'Bulk Rule Deployment',
+                desc: 'Push keyword lists, negative keywords, bid adjustments, and audience segments to multiple accounts simultaneously.',
+              },
+              {
+                rectSrc: '/assets/10/Rectangle 24.png',
+                iconSrc: '/assets/10/数据挖掘 1.png',
+                title: 'Unified Budget Management',
+                desc: 'Allocate budgets across platforms and regions from a central interface with automatic spending controls.',
+              },
+              {
+                rectSrc: '/assets/11/Rectangle 23.png',
+                iconSrc: '/assets/11/数据建模 1.png',
+                title: 'Creative Asset Sharing',
+                desc: 'Maintain a central creative library and deploy assets across platforms while respecting platform-specific requirements.',
+              },
+            ].map((item, i) => (
+              <div key={item.title} style={{
+                display: 'flex', alignItems: 'flex-start', gap: 20,
+                padding: '36px 32px',
+                borderRight: i % 2 === 0 ? '1px solid rgba(124,58,237,0.15)' : 'none',
+                borderBottom: i < 2 ? '1px solid rgba(124,58,237,0.15)' : 'none',
+                background: 'white',
+              }}>
+                {/* Icon */}
+                <div style={{ position: 'relative', width: 60, height: 60, flexShrink: 0 }}>
+                  <img src={item.rectSrc} alt="" style={{ width: 60, height: 60, borderRadius: 14, display: 'block' }} />
+                  <img src={item.iconSrc} alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 32, height: 32, objectFit: 'contain' }} />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{
-            background: 'white', borderRadius: 18, border: '1px solid #EAF1FF',
-            padding: '32px 28px', boxShadow: '0 2px 16px rgba(27,110,243,0.07)',
-          }}>
-            <div style={{ width: 52, height: 52, borderRadius: 16, background: '#fff7ed', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, marginBottom: 18 }}>💰</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: '#0D1B2A', marginBottom: 10 }}>Unified Budget Management</div>
-            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65, marginBottom: 16 }}>
-              Manage and redistribute budgets across all platforms from a single interface. Set global caps, channel allocations, and let Sapientia's AI optimize spend in real time.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {[
-                { platform: 'Meta', pct: 35, color: '#1B6EF3' },
-                { platform: 'Google', pct: 28, color: '#f97316' },
-                { platform: 'TikTok', pct: 22, color: '#22c55e' },
-                { platform: 'Amazon', pct: 15, color: '#a855f7' },
-              ].map((b) => (
-                <div key={b.platform} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: '#6B7A8D', width: 56 }}>{b.platform}</div>
-                  <div style={{ flex: 1, height: 6, background: '#f0f4ff', borderRadius: 100, overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${b.pct}%`, background: b.color, borderRadius: 100 }} />
-                  </div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#0D1B2A', width: 32, textAlign: 'right' }}>{b.pct}%</div>
+                {/* Text */}
+                <div>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: '#1B6EF3', marginBottom: 8 }}>{item.title}</div>
+                  <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.7 }}>{item.desc}</div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{
-            background: 'white', borderRadius: 18, border: '1px solid #EAF1FF',
-            padding: '32px 28px', boxShadow: '0 2px 16px rgba(27,110,243,0.07)',
-          }}>
-            <div style={{ width: 52, height: 52, borderRadius: 16, background: '#fdf4ff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, marginBottom: 18 }}>🖼️</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: '#0D1B2A', marginBottom: 10 }}>Creative Asset Sharing</div>
-            <p style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65, marginBottom: 16 }}>
-              Maintain a shared creative library across all brands and campaigns. Upload once, adapt automatically, and ensure brand consistency wherever your ads appear.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-              {[
-                { icon: '🎬', label: 'Videos', count: '124', color: '#fdf4ff' },
-                { icon: '🖼️', label: 'Images', count: '389', color: '#EAF1FF' },
-                { icon: '📝', label: 'Copy', count: '76', color: '#f0fdf4' },
-              ].map((asset) => (
-                <div key={asset.label} style={{ background: asset.color, borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 22, marginBottom: 6 }}>{asset.icon}</div>
-                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 18, fontWeight: 800, color: '#0D1B2A' }}>{asset.count}</div>
-                  <div style={{ fontSize: 10, color: '#6B7A8D', marginTop: 2 }}>{asset.label}</div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
