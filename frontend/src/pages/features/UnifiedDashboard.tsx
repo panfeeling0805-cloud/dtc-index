@@ -195,83 +195,54 @@ export default function UnifiedDashboard() {
 
       {/* ── MULTI-BRAND TEAM MANAGEMENT ── */}
       <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
-          {/* Left — features */}
-          <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Team & Brand Management
-            </p>
-            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 20, color: '#0D1B2A' }}>
-              Seamless Multi-Brand &{' '}
-              <span className="gradient-text">Team Management.</span>
-            </h2>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 32, fontWeight: 500 }}>
-              Whether you manage one brand or fifty, Sapientia gives every team member the right access at the right level — without compromising control.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              {[
-                {
-                  icon: '🏢',
-                  title: 'Create Business Profile',
-                  desc: 'Set up dedicated workspaces for each brand or client. Keep campaigns, budgets, and data fully separated and organized.',
-                  accent: '#EAF1FF',
-                },
-                {
-                  icon: '👥',
-                  title: 'Invite Team Members',
-                  desc: 'Add team members with granular permissions — admin, editor, or viewer — and control exactly what each person can see and do.',
-                  accent: '#f0fdf4',
-                },
-                {
-                  icon: '🔄',
-                  title: 'Switch Context Instantly',
-                  desc: 'Jump between brand accounts with one click. No logging out, no confusion — just seamless context switching across your entire portfolio.',
-                  accent: '#fff7ed',
-                },
-              ].map((item) => (
-                <div key={item.title} style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: 12, background: item.accent, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, flexShrink: 0 }}>
-                    {item.icon}
-                  </div>
-                  <div>
-                    <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', marginBottom: 6 }}>{item.title}</div>
-                    <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65 }}>{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3.5vw, 44px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 20, color: '#0D1B2A' }}>
+            Seamless Multi-Brand &{' '}
+            <span className="gradient-text">Team Management.</span>
+          </h2>
+          <p style={{ fontSize: 15, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 48, maxWidth: 620, margin: '0 auto 48px', fontWeight: 500 }}>
+            Built for teams managing brands at scale.<br />
+            Give every stakeholder the exact access they need — while keeping campaigns, budgets, and approvals fully under control.
+          </p>
 
-          {/* Right — dashboard mockup */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <DashboardMockup
-              title="Team Workspace"
-              rows={[
-                { label: 'Brand A — Nike Campaign', value: 'Admin: Sarah · 3 members', color: '#EAF1FF', badge: 'Active', badgeColor: '#22c55e' },
-                { label: 'Brand B — Adidas Q4', value: 'Admin: John · 5 members', color: '#f0fdf4', badge: 'Active', badgeColor: '#22c55e' },
-                { label: 'Brand C — Puma Launch', value: 'Admin: Lisa · 2 members', color: '#fff7ed', badge: 'Draft', badgeColor: '#f59e0b' },
-                { label: 'Brand D — Reebok Promo', value: 'Admin: Mark · 4 members', color: '#fdf4ff', badge: 'Active', badgeColor: '#22c55e' },
-              ]}
-            />
-            {/* Member invite card */}
-            <div style={{ background: 'white', borderRadius: 14, border: '1px solid #EAF1FF', padding: '16px 20px', boxShadow: '0 2px 16px rgba(27,110,243,0.07)' }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: '#0D1B2A', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>Recent Invites</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {[
-                  { name: 'alex@brand.com', role: 'Editor', color: '#EAF1FF', roleColor: '#1B6EF3' },
-                  { name: 'morgan@agency.io', role: 'Viewer', color: '#f0fdf4', roleColor: '#22c55e' },
-                  { name: 'taylor@client.com', role: 'Admin', color: '#fff7ed', roleColor: '#f97316' },
-                ].map((inv) => (
-                  <div key={inv.name} style={{ display: 'flex', alignItems: 'center', gap: 10, background: inv.color, borderRadius: 8, padding: '9px 12px' }}>
-                    <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, color: '#0D1B2A', flexShrink: 0 }}>
-                      {inv.name[0].toUpperCase()}
-                    </div>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: '#0D1B2A', flex: 1 }}>{inv.name}</div>
-                    <span style={{ fontSize: 10, fontWeight: 700, color: inv.roleColor, background: 'white', padding: '2px 8px', borderRadius: 100 }}>{inv.role}</span>
-                  </div>
-                ))}
+          {/* Large image */}
+          <img
+            src="/assets/Group 64.png"
+            alt="Team Management Dashboard"
+            style={{ width: '100%', maxWidth: 900, borderRadius: 20, boxShadow: '0 8px 48px rgba(27,110,243,0.13)', display: 'block', margin: '0 auto 72px' }}
+          />
+
+          {/* Three feature items */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, maxWidth: 900, margin: '0 auto' }}>
+            {[
+              {
+                rectSrc: '/assets/5/Rectangle 18.png',
+                iconSrc: '/assets/5/人脸识别 1.png',
+                title: 'Create Business Profile',
+                desc: 'Set up dedicated workspaces for each brand or client. Keep campaigns, budgets, and data fully separated and organized.',
+              },
+              {
+                rectSrc: '/assets/6/Rectangle 19.png',
+                iconSrc: '/assets/6/信息提取 1.png',
+                title: 'Invite Team Members',
+                desc: 'Add team members with granular permissions — admin, editor, or viewer — and control exactly what each person can see and do.',
+              },
+              {
+                rectSrc: '/assets/7/Rectangle 20.png',
+                iconSrc: '/assets/7/智能搜索 1.png',
+                title: 'Switch Context Instantly',
+                desc: 'Jump between brand accounts with one click. No logging out, no confusion — just seamless context switching across your entire portfolio.',
+              },
+            ].map((item) => (
+              <div key={item.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                <div style={{ position: 'relative', width: 64, height: 64 }}>
+                  <img src={item.rectSrc} alt="" style={{ width: 64, height: 64, borderRadius: 16, display: 'block' }} />
+                  <img src={item.iconSrc} alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+                </div>
+                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A' }}>{item.title}</div>
+                <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65 }}>{item.desc}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
