@@ -1,3 +1,4 @@
+import React from 'react'
 import CtaLink from '../../components/CtaLink'
 
 const DashboardMockup = ({ title, rows }: { title: string; rows: { label: string; value: string; color: string; badge?: string; badgeColor?: string }[] }) => (
@@ -33,28 +34,23 @@ const CheckItem = ({ text }: { text: string }) => (
   </li>
 )
 
-const FeatureCard = ({ icon, title, description, accent }: { icon: string; title: string; description: string; accent?: string }) => (
+const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => (
   <div style={{
-    background: 'white',
+    background: 'linear-gradient(145deg, #0d1224 0%, #1a1a50 100%)',
     borderRadius: 18,
-    border: '1px solid #EAF1FF',
+    border: '1px solid rgba(100,80,240,0.3)',
     padding: '28px 24px',
-    boxShadow: '0 2px 16px rgba(27,110,243,0.07)',
+    boxShadow: '0 2px 24px rgba(0,0,0,0.35)',
     display: 'flex',
     flexDirection: 'column',
     gap: 14,
   }}>
-    <div style={{
-      width: 48, height: 48, borderRadius: 14,
-      background: accent ?? '#EAF1FF',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      fontSize: 22, flexShrink: 0,
-    }}>
+    <div style={{ width: 64, height: 64, flexShrink: 0 }}>
       {icon}
     </div>
     <div>
-      <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', marginBottom: 8 }}>{title}</div>
-      <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65 }}>{description}</div>
+      <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: 'white', marginBottom: 8 }}>{title}</div>
+      <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.62)', lineHeight: 1.65 }}>{description}</div>
     </div>
   </div>
 )
@@ -143,41 +139,56 @@ export default function UnifiedDashboard() {
       {/* ── COMMAND CENTER ── */}
       <section style={{ padding: '80px 48px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-            Platform Capabilities
-          </p>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, marginBottom: 14, color: '#0D1B2A' }}>
             Your Business, Your{' '}
             <span className="gradient-text">Unified Command Center.</span>
           </h2>
-          <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
-            One platform to connect, monitor, and optimize every ad across every channel — without the chaos of juggling multiple tools.
+          <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 600, margin: '0 auto', lineHeight: 1.7 }}>
+            The control layer for modern advertising.<br />
+            Unify campaigns across every major platform with transparent AI optimization, centralized performance tracking, and enterprise-grade collaboration.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
           <FeatureCard
-            icon="🔗"
+            icon={
+              <div style={{ position: 'relative', width: 64, height: 64 }}>
+                <img src="/assets/2/Rectangle 14.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
+                <img src="/assets/2/信息过滤 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              </div>
+            }
             title="Universal Platform Integration"
             description="Connect TikTok, Amazon Ads, Google Ads, Meta, and Instagram in minutes. Sapientia syncs your accounts instantly so you never miss a campaign update."
-            accent="#EAF1FF"
           />
           <FeatureCard
-            icon="📊"
+            icon={
+              <div style={{ position: 'relative', width: 64, height: 64 }}>
+                <img src="/assets/3/Rectangle 15.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
+                <img src="/assets/3/大数据 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              </div>
+            }
             title="Cross-Platform Reporting"
             description="See unified analytics across all platforms in a single view. Compare ROAS, spend, and conversions side by side to make data-driven decisions faster."
-            accent="#f0fdf4"
           />
           <FeatureCard
-            icon="⚡"
+            icon={
+              <div style={{ position: 'relative', width: 64, height: 64 }}>
+                <img src="/assets/4/Rectangle 16.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
+                <img src="/assets/4/image 198.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+                <img src="/assets/4/智能云 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              </div>
+            }
             title="Bulk Campaign Creation"
             description="Launch campaigns across multiple platforms simultaneously. Set budgets, audiences, and creative assets once, then deploy everywhere with one click."
-            accent="#fff7ed"
           />
           <FeatureCard
-            icon="🎨"
+            icon={
+              <div style={{ position: 'relative', width: 64, height: 64 }}>
+                <img src="/assets/5/Rectangle 18.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
+                <img src="/assets/5/人脸识别 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              </div>
+            }
             title="Format Support"
             description="From short-form video to static display, carousel to stories — Sapientia supports every ad format across every channel, auto-adapting your creative assets."
-            accent="#fdf4ff"
           />
         </div>
       </section>
