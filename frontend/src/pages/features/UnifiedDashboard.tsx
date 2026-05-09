@@ -365,11 +365,11 @@ export default function UnifiedDashboard() {
       {/* ── CTA ── */}
       <section style={{ padding: '96px 48px', textAlign: 'center', background: 'white' }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, marginBottom: 18, color: '#0D1B2A', lineHeight: 1.1, whiteSpace: 'nowrap' }}>
+          <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, marginBottom: 18, color: '#0D1B2A', lineHeight: 1.1, textAlign: 'center' }}>
             Ready to <span className="gradient-text">Unify Your Ad Management?</span>
           </h2>
-          <p style={{ fontSize: 16, color: '#6B7A8D', lineHeight: 1.6, marginBottom: 40, maxWidth: 520, margin: '0 auto 40px' }}>
-            Join thousands of marketers who've replaced fragmented ad tools<br />with one powerful, AI-driven dashboard. Stop managing tabs. Start managing results.
+          <p style={{ fontSize: 16, color: '#6B7A8D', lineHeight: 1.6, marginBottom: 40, maxWidth: 520, margin: '0 auto 40px', textAlign: 'center' }}>
+            Join thousands of marketers who've replaced fragmented ad tools with one powerful, AI-driven dashboard.<br />Stop managing tabs. Start managing results.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '14px 36px', borderRadius: 100, fontWeight: 700 }}>
