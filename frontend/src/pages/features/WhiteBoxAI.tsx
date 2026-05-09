@@ -1,32 +1,6 @@
-import { useState } from 'react'
 import CtaLink from '../../components/CtaLink'
 
 export default function WhiteBoxAI() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-
-  const faqs = [
-    {
-      q: 'What makes Sapientia\'s AI "white-box"?',
-      a: 'White-box means every decision, recommendation, and strategy change is fully visible and explainable. You can see exactly why a bid was increased, why a keyword was paused, or why a budget was shifted — with reasoning attached to every action.',
-    },
-    {
-      q: 'Can I approve or reject AI recommendations before they execute?',
-      a: 'Yes. Sapientia features an approval workflow where every significant strategy change is surfaced for your review before execution. You stay in control — the AI proposes, you decide.',
-    },
-    {
-      q: 'How does the Strategy Log work?',
-      a: 'The Strategy Log is a full audit trail of every decision made by the AI engine. Each entry includes the timestamp, the action taken, the data signals that triggered it, and the outcome. You can filter, search, and export the log at any time.',
-    },
-    {
-      q: 'Can I set custom business rules that the AI must follow?',
-      a: 'Absolutely. Sapientia allows you to define guardrails — minimum ROAS thresholds, bid caps, budget floors, blacklisted keywords, and more. The AI will never violate these rules, and you can update them at any time.',
-    },
-    {
-      q: 'Is the white-box approach available on all plans?',
-      a: 'Core transparency features — visible recommendations, the strategy log, and approval workflows — are available on all plans. Advanced custom rule-sets and enterprise audit exports are available on the Strategic Partner plan.',
-    },
-  ]
-
   return (
     <main style={{ background: 'white', minHeight: '100vh', overflow: 'hidden' }}>
 
@@ -163,47 +137,12 @@ export default function WhiteBoxAI() {
           </div>
 
           {/* Right */}
-          <div>
-            <p style={{
-              fontSize: 13, fontWeight: 700, color: '#1B6EF3',
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              marginBottom: 20, fontFamily: "'Sora', sans-serif",
-            }}>
-              We believe strategy should be:
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {[
-                { label: 'Explainable', desc: 'Every decision comes with a reason you can read, share, and learn from.' },
-                { label: 'Yours to control', desc: 'Approve, reject, or modify any recommendation before it goes live.' },
-                { label: 'Reviewable', desc: 'A full audit trail of every strategy action, forever searchable.' },
-              ].map(item => (
-                <div key={item.label} style={{
-                  display: 'flex', alignItems: 'flex-start', gap: 16,
-                  padding: '20px 24px',
-                  background: '#f8faff',
-                  borderRadius: 16,
-                  border: '1px solid #e4eeff',
-                }}>
-                  <span style={{
-                    background: '#EAF1FF',
-                    color: '#1B6EF3',
-                    fontFamily: "'Sora', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 12,
-                    padding: '5px 14px',
-                    borderRadius: 100,
-                    whiteSpace: 'nowrap',
-                    flexShrink: 0,
-                    marginTop: 2,
-                  }}>
-                    {item.label}
-                  </span>
-                  <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.65, margin: 0, fontFamily: "'Inter', sans-serif" }}>
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img
+              src="/assets/product-problem-CuMixbkP.png"
+              alt=""
+              style={{ width: '100%', objectFit: 'contain', display: 'block' }}
+            />
           </div>
         </div>
       </section>
@@ -496,9 +435,16 @@ export default function WhiteBoxAI() {
       </section>
 
       {/* ── SECTION: Smarter, Safer, and Scalable ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+      <section style={{
+        padding: '96px 48px',
+        backgroundImage: "url('/assets/Mask group .png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+
+          {/* Left: title + cards */}
+          <div>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
@@ -508,64 +454,63 @@ export default function WhiteBoxAI() {
               Smarter, Safer, and{' '}
               <span className="gradient-text">Scalable Advertising.</span>
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7A8D', maxWidth: 500, margin: '0 auto', lineHeight: 1.7, fontFamily: "'Inter', sans-serif" }}>
+            <p style={{ fontSize: 15, color: '#6B7A8D', lineHeight: 1.7, fontFamily: "'Inter', sans-serif", marginBottom: 40 }}>
               Three problems every other AI ad platform creates. Zero of them with Sapientia.
             </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+              {[
+                {
+                  solidColor: '#1B6EF3',
+                  label: 'No Black Box',
+                  desc: 'Every decision, every recommendation, every outcome — visible and explained. You always know why your budget moved.',
+                },
+                {
+                  solidColor: '#ef4444',
+                  label: 'No Autopilot Risk',
+                  desc: 'The AI proposes. You decide. No changes execute without passing your approval rules and business constraints.',
+                },
+                {
+                  solidColor: '#16a34a',
+                  label: 'No Overfitting',
+                  desc: 'Strategies are built on expert logic plus live data — not just historical patterns that break when the market shifts.',
+                },
+              ].map(item => (
+                <div key={item.label} style={{
+                  background: 'white',
+                  borderRadius: 16,
+                  border: '1px solid #e4eeff',
+                  padding: '20px 24px',
+                  display: 'flex', alignItems: 'flex-start', gap: 16,
+                  boxShadow: '0 2px 12px rgba(27,110,243,0.05)',
+                }}>
+                  <div style={{
+                    width: 12, height: 12, borderRadius: '50%',
+                    background: item.solidColor,
+                    flexShrink: 0, marginTop: 4,
+                  }} />
+                  <div>
+                    <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 800, color: '#0D1B2A', marginBottom: 6 }}>
+                      {item.label}
+                    </div>
+                    <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, fontFamily: "'Inter', sans-serif", margin: 0 }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-            {[
-              {
-                icon: '⬜',
-                iconBg: '#EAF1FF',
-                iconColor: '#1B6EF3',
-                label: 'No Black Box',
-                desc: 'Every decision, every recommendation, every outcome — visible and explained. You always know why your budget moved.',
-              },
-              {
-                icon: '🛑',
-                iconBg: '#fff0f0',
-                iconColor: '#ef4444',
-                label: 'No Autopilot Risk',
-                desc: 'The AI proposes. You decide. No changes execute without passing your approval rules and business constraints.',
-              },
-              {
-                icon: '📐',
-                iconBg: '#f0fdf4',
-                iconColor: '#16a34a',
-                label: 'No Overfitting',
-                desc: 'Strategies are built on expert logic plus live data — not just historical patterns that break when the market shifts.',
-              },
-            ].map(item => (
-              <div key={item.label} style={{
-                background: 'white',
-                borderRadius: 20,
-                border: '1px solid #e4eeff',
-                padding: '36px 28px',
-                textAlign: 'center',
-                boxShadow: '0 2px 12px rgba(27,110,243,0.05)',
-              }}>
-                <div style={{
-                  width: 60, height: 60, borderRadius: 18,
-                  background: item.iconBg,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 26, margin: '0 auto 20px',
-                }}>
-                  {item.icon}
-                </div>
-                <h3 style={{
-                  fontFamily: "'Sora', sans-serif",
-                  fontSize: 18, fontWeight: 800,
-                  color: '#0D1B2A', marginBottom: 12,
-                }}>
-                  {item.label}
-                </h3>
-                <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, fontFamily: "'Inter', sans-serif", margin: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          {/* Right: image */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img
+              src="/assets/Group 1948759932 .png"
+              alt=""
+              style={{ width: '100%', objectFit: 'contain', display: 'block' }}
+            />
           </div>
+
         </div>
       </section>
 
@@ -630,49 +575,6 @@ export default function WhiteBoxAI() {
         </div>
       </section>
 
-      {/* ── FAQ ── */}
-      <section style={{ background: 'white', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: "'Sora', sans-serif",
-            fontSize: 'clamp(32px, 4vw, 48px)',
-            fontWeight: 800, textAlign: 'center',
-            marginBottom: 64, color: '#0D1B2A',
-          }}>
-            Frequently Asked Questions
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {faqs.map((faq, i) => (
-              <div key={i} style={{ borderTop: '1px solid #EAECF0' }}>
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  style={{
-                    width: '100%', background: 'none', border: 'none', cursor: 'pointer',
-                    display: 'flex', alignItems: 'flex-start', gap: 12,
-                    padding: '24px 0', textAlign: 'left',
-                  }}
-                >
-                  <span style={{ color: '#1B6EF3', fontSize: 16, lineHeight: 1, marginTop: 2, flexShrink: 0 }}>•</span>
-                  <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', flex: 1, lineHeight: 1.4 }}>
-                    {faq.q}
-                  </span>
-                  <span style={{
-                    flexShrink: 0, fontSize: 16, color: '#6B7A8D', marginTop: 2,
-                    transform: openFaq === i ? 'rotate(90deg)' : 'none',
-                    transition: 'transform 0.2s', display: 'inline-block',
-                  }}>›</span>
-                </button>
-                {openFaq === i && (
-                  <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, paddingLeft: 28, paddingBottom: 24, marginTop: -8, fontFamily: "'Inter', sans-serif" }}>
-                    {faq.a}
-                  </p>
-                )}
-              </div>
-            ))}
-            <div style={{ borderTop: '1px solid #EAECF0' }} />
-          </div>
-        </div>
-      </section>
 
     </main>
   )
