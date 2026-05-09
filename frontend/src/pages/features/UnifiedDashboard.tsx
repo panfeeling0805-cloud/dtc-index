@@ -103,7 +103,7 @@ export default function UnifiedDashboard() {
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100 }}>
               Hire Sapientia
             </CtaLink>
-            <CtaLink className="btn btn-ghost" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100, border: '1.5px solid #1B6EF3', color: '#1B6EF3', background: 'transparent' }}>
+            <CtaLink className="btn btn-ghost" style={{ fontSize: 15, padding: '13px 32px', borderRadius: 100, background: 'transparent' }}>
               Schedule Demo
             </CtaLink>
           </div>
@@ -375,7 +375,7 @@ export default function UnifiedDashboard() {
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '14px 36px', borderRadius: 100, fontWeight: 700 }}>
               Hire Sapientia
             </CtaLink>
-            <CtaLink className="btn btn-ghost" style={{ fontSize: 15, padding: '14px 36px', borderRadius: 100, border: '1.5px solid #1B6EF3', color: '#1B6EF3', background: 'transparent', fontWeight: 700 }}>
+            <CtaLink className="btn btn-ghost" style={{ fontSize: 15, padding: '14px 36px', borderRadius: 100, background: 'transparent', fontWeight: 700 }}>
               Schedule Demo
             </CtaLink>
           </div>

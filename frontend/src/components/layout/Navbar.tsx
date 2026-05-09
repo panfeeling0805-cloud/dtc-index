@@ -79,7 +79,7 @@ export default function Navbar() {
                 background: 'white', borderRadius: 12, padding: '8px',
                 boxShadow: '0 8px 32px rgba(27,110,243,0.15)',
                 border: '1px solid rgba(27,110,243,0.08)',
-                minWidth: 200, zIndex: 200,
+                minWidth: 240, zIndex: 200,
               }}>
                 {[
                   { to: '/features/whitebox-ai', label: 'White-Box AI' },
