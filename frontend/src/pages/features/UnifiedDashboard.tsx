@@ -316,65 +316,23 @@ export default function UnifiedDashboard() {
           pointerEvents: 'none',
         }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              AI-Powered Intelligence
-            </p>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, marginBottom: 14, color: 'white' }}>
               One Brain for{' '}
               <span className="gradient-text">Every Channel</span>
             </h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.60)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
-              Sapientia's AI doesn't just aggregate data — it learns across all your channels simultaneously, surfacing insights and recommendations that no single-platform tool can match.
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.60)', maxWidth: 620, margin: '0 auto', lineHeight: 1.6 }}>
+              AI-powered monitoring that detects performance anomalies, budget risks, and optimization opportunities<br />across every advertising channel in real time.
             </p>
           </div>
 
-          {/* Dark dashboard mockup */}
-          <div style={{ maxWidth: 900, margin: '0 auto', background: 'rgba(255,255,255,0.05)', borderRadius: 20, border: '1px solid rgba(255,255,255,0.10)', padding: '28px 32px', backdropFilter: 'blur(12px)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 28 }}>
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.8)', marginLeft: 10 }}>Sapientia AI — Cross-Channel Insights</span>
-              <span style={{ marginLeft: 'auto', background: 'rgba(27,110,243,0.3)', color: '#a5c4ff', fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 100, border: '1px solid rgba(27,110,243,0.4)' }}>● AI Active</span>
-            </div>
-
-            {/* AI insights */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 24 }}>
-              {[
-                { icon: '🧠', title: 'AI Recommendation', text: 'Shift 15% budget from Google Display to Meta Reels — projected +0.8x ROAS', color: 'rgba(27,110,243,0.15)', border: 'rgba(27,110,243,0.3)' },
-                { icon: '📈', title: 'Trend Alert', text: 'TikTok video CPM down 22% this week. Optimal window for new creative launch.', color: 'rgba(34,197,94,0.12)', border: 'rgba(34,197,94,0.25)' },
-                { icon: '⚠️', title: 'Anomaly Detected', text: 'Amazon Sponsored Products CTR dropped 18% in last 6 hours — review creative.', color: 'rgba(249,115,22,0.12)', border: 'rgba(249,115,22,0.25)' },
-              ].map((insight) => (
-                <div key={insight.title} style={{ background: insight.color, border: `1px solid ${insight.border}`, borderRadius: 12, padding: '18px 16px' }}>
-                  <div style={{ fontSize: 20, marginBottom: 10 }}>{insight.icon}</div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 6 }}>{insight.title}</div>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{insight.text}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Performance bars */}
-            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 12, padding: '20px' }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 16 }}>Channel Performance Index</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {[
-                  { platform: 'Meta', score: 92, color: '#1B6EF3' },
-                  { platform: 'TikTok', score: 87, color: '#22c55e' },
-                  { platform: 'Google', score: 79, color: '#f97316' },
-                  { platform: 'Amazon', score: 95, color: '#a855f7' },
-                  { platform: 'Instagram', score: 83, color: '#ec4899' },
-                ].map((ch) => (
-                  <div key={ch.platform} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                    <div style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.6)', width: 70 }}>{ch.platform}</div>
-                    <div style={{ flex: 1, height: 6, background: 'rgba(255,255,255,0.08)', borderRadius: 100, overflow: 'hidden' }}>
-                      <div style={{ height: '100%', width: `${ch.score}%`, background: ch.color, borderRadius: 100 }} />
-                    </div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.8)', width: 36, textAlign: 'right' }}>{ch.score}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Image */}
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <img
+              src="/assets/Group 63.png"
+              alt="AI Cross-Channel Intelligence"
+              style={{ width: '100%', borderRadius: 20, display: 'block' }}
+            />
           </div>
 
           {/* Stats row */}
@@ -407,22 +365,11 @@ export default function UnifiedDashboard() {
       {/* ── CTA ── */}
       <section style={{ padding: '96px 48px', textAlign: 'center', background: 'white' }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: '#EAF1FF', border: '1px solid rgba(27,110,243,0.20)',
-            borderRadius: 100, padding: '6px 18px', marginBottom: 28,
-          }}>
-            <span style={{ fontSize: 14 }}>🚀</span>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.07em', fontFamily: "'Sora', sans-serif" }}>
-              GET STARTED TODAY
-            </span>
-          </div>
-          <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, marginBottom: 18, color: '#0D1B2A', lineHeight: 1.15 }}>
-            Ready to{' '}
-            <span className="gradient-text">Unify Your Ad Management?</span>
+          <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 4vw, 46px)', fontWeight: 800, marginBottom: 18, color: '#0D1B2A', lineHeight: 1.1, whiteSpace: 'nowrap' }}>
+            Ready to <span className="gradient-text">Unify Your Ad Management?</span>
           </h2>
-          <p style={{ fontSize: 16, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
-            Join thousands of marketers who've replaced their fragmented ad tools with one powerful, AI-driven dashboard. Stop managing tabs. Start managing results.
+          <p style={{ fontSize: 16, color: '#6B7A8D', lineHeight: 1.6, marginBottom: 40, maxWidth: 520, margin: '0 auto 40px' }}>
+            Join thousands of marketers who've replaced fragmented ad tools<br />with one powerful, AI-driven dashboard. Stop managing tabs. Start managing results.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
             <CtaLink className="btn btn-primary" style={{ fontSize: 15, padding: '14px 36px', borderRadius: 100, fontWeight: 700 }}>
@@ -432,7 +379,6 @@ export default function UnifiedDashboard() {
               Schedule Demo
             </CtaLink>
           </div>
-          <p style={{ fontSize: 12, color: '#6B7A8D', marginTop: 20 }}>No credit card required · Free 14-day trial · Cancel anytime</p>
         </div>
       </section>
 
