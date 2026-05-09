@@ -41,16 +41,6 @@ export default function IntelligenceHub() {
           pointerEvents: 'none',
         }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 760, margin: '0 auto' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(27,110,243,0.2)', border: '1px solid rgba(27,110,243,0.4)',
-            borderRadius: 100, padding: '6px 16px', marginBottom: 28,
-          }}>
-            <span style={{ fontSize: 16 }}>🧩</span>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>
-              INTELLIGENCE HUB
-            </span>
-          </div>
           <h1 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,
             fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: 1.1,
@@ -113,79 +103,69 @@ export default function IntelligenceHub() {
           </p>
         </div>
 
-        {/* Blue card group */}
-        <div style={{ marginBottom: 24 }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: '#EAF1FF', borderRadius: 100, padding: '5px 14px', marginBottom: 16,
-          }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#1B6EF3', display: 'inline-block' }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>DATA & MARKET INTELLIGENCE</span>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
-            {blueCards.map((card) => (
-              <div key={card.title} style={{
-                background: 'linear-gradient(135deg, #EAF1FF 0%, #dbeafe 100%)',
-                borderRadius: 16, padding: '24px 20px',
-                border: '1px solid rgba(27,110,243,0.15)',
-                display: 'flex', flexDirection: 'column', gap: 10,
-              }}>
-                <span style={{ fontSize: 28 }}>{card.icon}</span>
-                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
-                <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* 3-column compact card layout */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, alignItems: 'start' }}>
 
-        {/* Green card group */}
-        <div style={{ marginBottom: 24 }}>
+          {/* Blue column */}
           <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: '#f0fdf4', borderRadius: 100, padding: '5px 14px', marginBottom: 16,
+            background: 'linear-gradient(160deg, #EAF1FF 0%, #dbeafe 100%)',
+            borderRadius: 20, padding: '28px 24px',
+            border: '1px solid rgba(27,110,243,0.15)',
           }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#22c55e', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>CREATIVE & CAMPAIGN ASSETS</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#1B6EF3', display: 'inline-block', flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>DATA & MARKET INTELLIGENCE</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {blueCards.map((card) => (
+                <div key={card.title} style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingBottom: 16, borderBottom: '1px solid rgba(27,110,243,0.1)' }}>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
+                  <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-            {greenCards.map((card) => (
-              <div key={card.title} style={{
-                background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
-                borderRadius: 16, padding: '24px 20px',
-                border: '1px solid rgba(34,197,94,0.2)',
-                display: 'flex', flexDirection: 'column', gap: 10,
-              }}>
-                <span style={{ fontSize: 28 }}>{card.icon}</span>
-                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
-                <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Orange card group */}
-        <div>
+          {/* Green column */}
           <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: '#fff7ed', borderRadius: 100, padding: '5px 14px', marginBottom: 16,
+            background: 'linear-gradient(160deg, #f0fdf4 0%, #dcfce7 100%)',
+            borderRadius: 20, padding: '28px 24px',
+            border: '1px solid rgba(34,197,94,0.2)',
           }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f97316', display: 'inline-block' }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#f97316', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>OPTIMIZATION & DISCOVERY</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block', flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: '#22c55e', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>CREATIVE & CAMPAIGN ASSETS</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {greenCards.map((card) => (
+                <div key={card.title} style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingBottom: 16, borderBottom: '1px solid rgba(34,197,94,0.12)' }}>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
+                  <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
-            {orangeCards.map((card) => (
-              <div key={card.title} style={{
-                background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)',
-                borderRadius: 16, padding: '24px 20px',
-                border: '1px solid rgba(249,115,22,0.2)',
-                display: 'flex', flexDirection: 'column', gap: 10,
-              }}>
-                <span style={{ fontSize: 28 }}>{card.icon}</span>
-                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
-                <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
-              </div>
-            ))}
+
+          {/* Orange column */}
+          <div style={{
+            background: 'linear-gradient(160deg, #fff7ed 0%, #ffedd5 100%)',
+            borderRadius: 20, padding: '28px 24px',
+            border: '1px solid rgba(249,115,22,0.2)',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f97316', display: 'inline-block', flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: '#f97316', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>OPTIMIZATION & DISCOVERY</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {orangeCards.map((card) => (
+                <div key={card.title} style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingBottom: 16, borderBottom: '1px solid rgba(249,115,22,0.1)' }}>
+                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{card.title}</div>
+                  <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{card.desc}</div>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -230,9 +210,6 @@ export default function IntelligenceHub() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
           {/* Left */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Anomaly Detection
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Never Miss{' '}
               <span className="gradient-text">a Beat</span>
@@ -259,58 +236,18 @@ export default function IntelligenceHub() {
             </ul>
           </div>
 
-          {/* Right — bar chart + robot illustration */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            {/* Performance card */}
-            <div style={{
-              background: 'white', borderRadius: 20,
-              boxShadow: '0 4px 32px rgba(27,110,243,0.12)',
-              padding: '24px', border: '1px solid #f0f4ff',
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-                <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 8 }}>Live Performance Monitor</span>
-                <span style={{ marginLeft: 'auto', background: '#f0fdf4', color: '#22c55e', fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 100 }}>● LIVE</span>
-              </div>
-
-              {/* Bar chart */}
-              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8, height: 120, marginBottom: 12 }}>
-                {[60, 80, 45, 90, 70, 100, 65, 85].map((h, i) => (
-                  <div key={i} style={{
-                    width: 24, height: `${h}%`,
-                    background: i === 5 ? '#1B6EF3' : '#EAF1FF',
-                    borderRadius: '4px 4px 0 0',
-                    transition: 'height 0.3s',
-                    flex: 1,
-                  }} />
-                ))}
-              </div>
-
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: 12, color: '#6B7A8D' }}>Last 8 hours</span>
-                <span style={{ fontSize: 12, fontWeight: 700, color: '#22c55e' }}>+18% vs yesterday</span>
-              </div>
-            </div>
-
-            {/* Alert cards */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {[
-                { icon: '🤖', label: 'AI flagged anomaly at 14:00 — CPM spiked 32%', badge: 'Auto-fixed', badgeColor: '#22c55e', bg: '#f0fdf4' },
-                { icon: '⚡', label: 'Delta trigger: shifted $800 from low-CTR ad set', badge: 'Optimized', badgeColor: '#1B6EF3', bg: '#EAF1FF' },
-                { icon: '🛡️', label: 'Risk factor detected: frequency cap exceeded', badge: 'Alert sent', badgeColor: '#f97316', bg: '#fff7ed' },
-              ].map((item) => (
-                <div key={item.label} style={{
-                  display: 'flex', alignItems: 'center', gap: 12,
-                  background: item.bg, borderRadius: 12, padding: '12px 14px',
-                }}>
-                  <span style={{ fontSize: 18 }}>{item.icon}</span>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#0D1B2A', flex: 1, lineHeight: 1.4 }}>{item.label}</span>
-                  <span style={{ fontSize: 10, fontWeight: 700, color: item.badgeColor, background: 'white', padding: '3px 8px', borderRadius: 100, whiteSpace: 'nowrap' }}>{item.badge}</span>
-                </div>
-              ))}
-            </div>
+          {/* Right — images */}
+          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 0 }}>
+            <img
+              src="/assets/Group 2.png"
+              alt=""
+              style={{ width: '55%', objectFit: 'contain', alignSelf: 'flex-start', position: 'relative', zIndex: 2, marginBottom: -24 }}
+            />
+            <img
+              src="/assets/Group 15.png"
+              alt=""
+              style={{ width: '90%', objectFit: 'contain', display: 'block' }}
+            />
           </div>
         </div>
       </section>
@@ -319,76 +256,17 @@ export default function IntelligenceHub() {
       <section style={{ background: '#f8faff', padding: '96px 48px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
 
-          {/* Left — AI robot illustration */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div style={{
-              background: 'linear-gradient(135deg, #0f1729 0%, #1a2a50 100%)',
-              borderRadius: 24, padding: '48px 32px',
-              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-              minHeight: 280, position: 'relative', overflow: 'hidden',
-              border: '1px solid rgba(27,110,243,0.3)',
-            }}>
-              <div style={{
-                position: 'absolute', inset: 0,
-                backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
-                backgroundSize: '24px 24px',
-              }} />
-              {/* Stylized AI face */}
-              <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-                <div style={{
-                  width: 96, height: 96, borderRadius: 24, margin: '0 auto 16px',
-                  background: 'linear-gradient(135deg, #1B6EF3 0%, #60a5fa 100%)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 48, boxShadow: '0 0 40px rgba(27,110,243,0.5)',
-                }}>
-                  🤖
-                </div>
-                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: 'white', marginBottom: 8 }}>Sapientia AI</div>
-                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>Enterprise Intelligence Engine</div>
-                <div style={{ display: 'flex', gap: 8, justifyContent: 'center', marginTop: 20 }}>
-                  {['Custom KPIs', 'Brand Rules', 'Role Access'].map((tag) => (
-                    <span key={tag} style={{
-                      fontSize: 11, fontWeight: 600, color: '#a5c4ff',
-                      background: 'rgba(27,110,243,0.2)', borderRadius: 100,
-                      padding: '4px 10px', border: '1px solid rgba(27,110,243,0.3)',
-                    }}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial card */}
-            <div style={{
-              background: 'white', borderRadius: 20,
-              boxShadow: '0 4px 24px rgba(27,110,243,0.08)',
-              border: '1px solid #f0f4ff', padding: '24px',
-            }}>
-              <div style={{ display: 'flex', gap: 4, marginBottom: 12 }}>
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <span key={s} style={{ color: '#f59e0b', fontSize: 16 }}>★</span>
-                ))}
-              </div>
-              <p style={{ fontSize: 14, color: '#0D1B2A', lineHeight: 1.7, fontStyle: 'italic', marginBottom: 16 }}>
-                "Intelligence Hub gave us the single source of truth we'd been searching for. Custom KPIs, tailored to our brand strategy — not generic templates."
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{
-                  width: 40, height: 40, borderRadius: 12,
-                  background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20,
-                }}>👩‍💼</div>
-                <div>
-                  <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A' }}>Priya Nair</div>
-                  <div style={{ fontSize: 11, color: '#6B7A8D' }}>Head of Growth · Nexus Commerce</div>
-                </div>
-              </div>
-            </div>
+          {/* Left — Mask group image */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img
+              src="/assets/Mask group.png"
+              alt=""
+              style={{ width: '100%', maxWidth: 520, objectFit: 'contain', display: 'block' }}
+            />
           </div>
 
           {/* Right */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Enterprise Ready
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Private Customization,{' '}
               <span className="gradient-text">Enterprise-Ready</span>
@@ -417,14 +295,11 @@ export default function IntelligenceHub() {
                   color: '#fff7ed', accent: '#f97316',
                 },
               ].map((item) => (
-                <li key={item.title} style={{ display: 'flex', gap: 16 }}>
-                  <div style={{
-                    width: 48, height: 48, borderRadius: 14, background: item.color,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: 22, flexShrink: 0,
-                  }}>
-                    {item.icon}
-                  </div>
+                <li key={item.title} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                  <span style={{
+                    width: 8, height: 8, borderRadius: '50%', background: item.accent,
+                    flexShrink: 0, marginTop: 6, display: 'inline-block',
+                  }} />
                   <div>
                     <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A', marginBottom: 4 }}>{item.title}</div>
                     <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.6 }}>{item.desc}</div>
