@@ -32,16 +32,6 @@ export default function ProductTikTok() {
           pointerEvents: 'none',
         }} />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 760, margin: '0 auto' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(27,110,243,0.2)', border: '1px solid rgba(27,110,243,0.4)',
-            borderRadius: 100, padding: '6px 16px', marginBottom: 28,
-          }}>
-            <span style={{ fontSize: 16 }}>♪</span>
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.06em', fontFamily: "'Sora', sans-serif" }}>
-              TIKTOK AI MARKETING
-            </span>
-          </div>
           <h1 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,
             fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: 1.1,
@@ -68,9 +58,6 @@ export default function ProductTikTok() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              AI-Powered Automation
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Amplify Engagement<br />with{' '}
               <span className="gradient-text">AI</span>
@@ -237,9 +224,6 @@ export default function ProductTikTok() {
 
           {/* Right */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Real-Time Intelligence
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Decode Livestream<br />
               <span className="gradient-text">Comments</span>
@@ -266,9 +250,6 @@ export default function ProductTikTok() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Ad Intelligence
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 38px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Run Transparent<br />
               <span className="gradient-text">AI Ads</span>

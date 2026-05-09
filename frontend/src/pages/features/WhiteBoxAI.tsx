@@ -57,18 +57,6 @@ export default function WhiteBoxAI() {
         }} />
 
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: 8,
-            background: 'rgba(27,110,243,0.15)',
-            border: '1px solid rgba(27,110,243,0.35)',
-            borderRadius: 100, padding: '6px 16px',
-            marginBottom: 28,
-          }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#1B6EF3', display: 'inline-block' }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', fontFamily: "'Sora', sans-serif", letterSpacing: '0.08em' }}>
-              WHITE-BOX AI STRATEGY ENGINE
-            </span>
-          </div>
 
           <h1 style={{
             fontFamily: "'Sora', sans-serif",
@@ -224,13 +212,6 @@ export default function WhiteBoxAI() {
       <section style={{ background: '#f8faff', padding: '96px 48px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
-            <p style={{
-              fontSize: 12, fontWeight: 700, color: '#1B6EF3',
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              marginBottom: 12, fontFamily: "'Sora', sans-serif",
-            }}>
-              Full Transparency
-            </p>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(30px, 4vw, 52px)',
@@ -403,13 +384,6 @@ export default function WhiteBoxAI() {
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 72, alignItems: 'center' }}>
           {/* Left */}
           <div>
-            <p style={{
-              fontSize: 12, fontWeight: 700, color: '#1B6EF3',
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              marginBottom: 12, fontFamily: "'Sora', sans-serif",
-            }}>
-              Real-Time Intelligence
-            </p>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(28px, 3.5vw, 44px)',

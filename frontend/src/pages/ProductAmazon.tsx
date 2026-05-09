@@ -133,9 +133,6 @@ export default function ProductAmazon() {
 
           {/* Right */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Campaign Co-Pilot
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Focus on <span className="gradient-text">strategy</span>,<br />not manual campaign<br />management
             </h2>
@@ -157,9 +154,6 @@ export default function ProductAmazon() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Full Transparency
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Transparent<br />
               <span className="gradient-text">strategies.</span> Every<br />move explained.
@@ -349,9 +343,6 @@ export default function ProductAmazon() {
 
           {/* Right */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Intelligence Hub
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
               Turn every campaign<br />into a{' '}
               <span className="gradient-text">reusable asset.</span>
@@ -381,9 +372,6 @@ export default function ProductAmazon() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
           {/* Left */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#a5c4ff', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12, fontFamily: "'Sora', sans-serif" }}>
-              Enterprise Grade
-            </p>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: 'white' }}>
               Custom AI Models<br />
               <span className="gradient-text">— for brands that<br />need more.</span>

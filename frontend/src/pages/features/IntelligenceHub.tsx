@@ -172,9 +172,6 @@ export default function IntelligenceHub() {
       {/* ── FROM CHAOS TO CLARITY ── */}
       <section style={{ background: '#f8faff', padding: '96px 48px', textAlign: 'center' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: '#1B6EF3', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16, fontFamily: "'Sora', sans-serif" }}>
-            Data Clarity
-          </p>
           <h2 style={{
             fontFamily: "'Sora', sans-serif",
             fontSize: 'clamp(32px, 4.5vw, 52px)',
