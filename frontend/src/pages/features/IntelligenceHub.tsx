@@ -236,17 +236,12 @@ export default function IntelligenceHub() {
             </ul>
           </div>
 
-          {/* Right — images */}
-          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 0 }}>
-            <img
-              src="/assets/Group 2.png"
-              alt=""
-              style={{ width: '55%', objectFit: 'contain', alignSelf: 'flex-start', position: 'relative', zIndex: 2, marginBottom: -24 }}
-            />
+          {/* Right — image */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
               src="/assets/Group 15.png"
               alt=""
-              style={{ width: '90%', objectFit: 'contain', display: 'block' }}
+              style={{ width: '100%', objectFit: 'contain', display: 'block' }}
             />
           </div>
         </div>
