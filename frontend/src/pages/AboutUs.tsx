@@ -22,9 +22,13 @@ export default function AboutUs() {
       {/* 1. Hero Section */}
       <section
         style={{
-          ...sectionBase,
+          paddingTop: 80,
+          paddingBottom: 0,
+          paddingLeft: 24,
+          paddingRight: 24,
           background: 'linear-gradient(160deg, #dbeafe 0%, #ede9fe 50%, #e0f2fe 100%)',
           textAlign: 'center',
+          overflow: 'hidden',
         }}
       >
         <div style={container}>
@@ -61,12 +65,12 @@ export default function AboutUs() {
             across Amazon, Google, TikTok and Meta.
           </p>
 
-          {/* aboutme1 overlay image */}
+          {/* aboutme1 overlay image — enlarged 50% from previous 884px */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img
               src="/assets/aboutme1.png"
               alt=""
-              style={{ maxWidth: '100%', width: 884, objectFit: 'contain', display: 'block' }}
+              style={{ maxWidth: '120%', width: 1326, objectFit: 'contain', display: 'block' }}
             />
           </div>
         </div>
