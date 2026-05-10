@@ -23,9 +23,7 @@ export default function AboutUs() {
       <section
         style={{
           ...sectionBase,
-          backgroundImage: "url('/assets/path_1.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          background: 'linear-gradient(160deg, #dbeafe 0%, #ede9fe 50%, #e0f2fe 100%)',
           textAlign: 'center',
         }}
       >
@@ -68,7 +66,7 @@ export default function AboutUs() {
             <img
               src="/assets/aboutme1.png"
               alt=""
-              style={{ maxWidth: '100%', width: 680, objectFit: 'contain', display: 'block' }}
+              style={{ maxWidth: '100%', width: 884, objectFit: 'contain', display: 'block' }}
             />
           </div>
         </div>
@@ -134,7 +132,7 @@ export default function AboutUs() {
             </ul>
             <button
               style={{
-                background: blue,
+                background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
                 color: '#fff',
                 border: 'none',
                 borderRadius: 8,
@@ -142,6 +140,7 @@ export default function AboutUs() {
                 fontSize: 15,
                 fontWeight: 700,
                 cursor: 'pointer',
+                boxShadow: '0 2px 14px rgba(124,58,237,0.35)',
               }}
             >
               Free Sapientia
@@ -152,18 +151,21 @@ export default function AboutUs() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {[
               {
-                icon: '💡',
+                svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1b6ef3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><path d="M12 6a6 6 0 100 12 6 6 0 000-12z"/><line x1="12" y1="18" x2="12" y2="22"/><path d="M9 21h6"/></svg>,
                 title: 'Intelligent Strategy',
                 desc: 'AI that learns your brand and recommends what to run and what to stop.',
               },
               {
-                icon: '🔍',
+                svg: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1b6ef3" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
                 title: 'Explainable AI',
                 desc: 'No black boxes. Every recommendation comes with a reason.',
               },
-            ].map(({ icon, title, desc }) => (
+            ].map(({ svg, title, desc }) => (
               <div key={title} style={cardStyle}>
-                <div style={{ fontSize: 28, marginBottom: 10 }}>{icon}</div>
+                <div style={{
+                  width: 48, height: 48, borderRadius: 12, background: '#EAF1FF',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10,
+                }}>{svg}</div>
                 <h3
                   style={{
                     fontSize: 17,
@@ -185,9 +187,9 @@ export default function AboutUs() {
 
       {/* 3. Mission Section */}
       <section
+        className="bg-deep-gradient"
         style={{
           ...sectionBase,
-          background: '#f0f5ff',
           textAlign: 'center',
         }}
       >
@@ -197,7 +199,7 @@ export default function AboutUs() {
               fontSize: 32,
               fontWeight: 800,
               marginBottom: 20,
-              color: '#0f172a',
+              color: 'white',
             }}
           >
             Mission
@@ -205,7 +207,7 @@ export default function AboutUs() {
           <p
             style={{
               fontSize: 17,
-              color: '#334155',
+              color: 'rgba(255,255,255,0.75)',
               maxWidth: 720,
               margin: '0 auto',
               lineHeight: 1.8,
@@ -344,70 +346,23 @@ export default function AboutUs() {
             ))}
           </div>
 
-          {/* Team DNA tags */}
-          <div
-            style={{
-              background: '#f8fafc',
-              borderRadius: 16,
-              padding: '28px 32px',
-              display: 'inline-block',
-              maxWidth: '100%',
-            }}
-          >
-            <p
-              style={{
-                fontSize: 13,
-                fontWeight: 700,
-                color: '#94a3b8',
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                marginBottom: 16,
-              }}
-            >
-              Our Team DNA
-            </p>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: 12,
-                justifyContent: 'center',
-              }}
-            >
-              {[
-                { label: 'Operators First', bg: '#dbeafe', color: '#1d4ed8' },
-                { label: 'Transparent by Design', bg: '#dcfce7', color: '#15803d' },
-                { label: 'Data Driven', bg: '#fef3c7', color: '#b45309' },
-                { label: 'Always Improving', bg: '#fce7f3', color: '#be185d' },
-                { label: 'Cross-Platform Experts', bg: '#ede9fe', color: '#7c3aed' },
-                { label: 'Operator-First Culture', bg: '#ffedd5', color: '#c2410c' },
-              ].map(({ label, bg, color }) => (
-                <span
-                  key={label}
-                  style={{
-                    background: bg,
-                    color,
-                    borderRadius: 999,
-                    padding: '8px 18px',
-                    fontSize: 14,
-                    fontWeight: 600,
-                  }}
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
+          {/* Team DNA image */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="/assets/20260509110948.jpg"
+              alt="Our Team DNA"
+              style={{ maxWidth: '100%', width: 900, objectFit: 'contain', borderRadius: 16, display: 'block' }}
+            />
           </div>
         </div>
       </section>
 
       {/* 6. Contact Section */}
       <section
+        className="bg-deep-gradient"
         style={{
           ...sectionBase,
-          background: '#fff',
           textAlign: 'center',
-          borderTop: '1px solid #e2e8f0',
         }}
       >
         <div style={container}>
@@ -416,11 +371,16 @@ export default function AboutUs() {
               fontSize: 32,
               fontWeight: 800,
               marginBottom: 20,
-              color: '#0f172a',
+              background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
             }}
           >
             Contact us
           </h2>
+          <div />
           <a
             href="mailto:coolwcc@sapientia.tech"
             style={{
@@ -428,12 +388,15 @@ export default function AboutUs() {
               alignItems: 'center',
               gap: 10,
               fontSize: 18,
-              color: blue,
+              color: 'rgba(255,255,255,0.85)',
               fontWeight: 600,
               textDecoration: 'none',
             }}
           >
-            <span style={{ fontSize: 22 }}>✉️</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
             coolwcc@sapientia.tech
           </a>
         </div>

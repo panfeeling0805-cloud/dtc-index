@@ -168,21 +168,21 @@ export default function WhiteBoxAI() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {[
               {
-                icon: '👁',
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
                 title: 'Every Suggestion is Visible',
                 desc: 'Before any change is applied to your campaigns, you see it. The AI surfaces every recommendation with context — what triggered it, what it expects to happen, and why now.',
                 accent: '#1B6EF3',
                 bg: '#EAF1FF',
               },
               {
-                icon: '✅',
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
                 title: 'Review & Approve Before it Executes',
                 desc: 'An approval workflow puts you in the driver\'s seat. Accept, modify, or decline any action. Set auto-approve thresholds for low-risk optimizations and manual review for bigger moves.',
                 accent: '#16a34a',
                 bg: '#f0fdf4',
               },
               {
-                icon: '📋',
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>,
                 title: 'Traceable Strategy Log',
                 desc: 'Every action the AI has ever taken lives in your Strategy Log — searchable, exportable, timestamped. Use it to audit performance, train your team, and build institutional knowledge.',
                 accent: '#7C3AED',
@@ -200,9 +200,9 @@ export default function WhiteBoxAI() {
                   width: 48, height: 48, borderRadius: 14,
                   background: card.bg,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 22, marginBottom: 20,
+                  color: card.accent, marginBottom: 20,
                 }}>
-                  {card.icon}
+                  {card.svg}
                 </div>
                 <h3 style={{
                   fontFamily: "'Sora', sans-serif",

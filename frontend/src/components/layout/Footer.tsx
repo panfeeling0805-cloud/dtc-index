@@ -18,7 +18,7 @@ export default function Footer() {
           <h5>Resources</h5>
           <ul>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Docs</a></li>
+            <li><a href="#">Affiliates</a></li>
             <li><a href="#">Changelog</a></li>
             <li><a href="#">Pricing</a></li>
           </ul>
@@ -27,7 +27,6 @@ export default function Footer() {
           <h5>Company</h5>
           <ul>
             <li><a href="#">Partners</a></li>
-            <li><a href="#">Affiliates</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
@@ -36,7 +35,7 @@ export default function Footer() {
           <h5>Help</h5>
           <ul>
             <li><a href="#">Help Center</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>

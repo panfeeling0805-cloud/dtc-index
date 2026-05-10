@@ -185,16 +185,16 @@ export default function IntelligenceHub() {
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
             {[
-              { icon: '🔗', label: 'Connected Data', color: '#EAF1FF', accent: '#1B6EF3' },
-              { icon: '⚡', label: 'Instant Insights', color: '#f0fdf4', accent: '#22c55e' },
-              { icon: '🎯', label: 'Precise Actions', color: '#fff7ed', accent: '#f97316' },
+              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>, label: 'Connected Data', color: '#EAF1FF', accent: '#1B6EF3' },
+              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, label: 'Instant Insights', color: '#f0fdf4', accent: '#22c55e' },
+              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>, label: 'Precise Actions', color: '#fff7ed', accent: '#f97316' },
             ].map((item) => (
               <div key={item.label} style={{
                 display: 'flex', alignItems: 'center', gap: 10,
                 background: item.color, borderRadius: 12, padding: '14px 20px',
                 border: `1px solid ${item.accent}22`,
               }}>
-                <span style={{ fontSize: 22 }}>{item.icon}</span>
+                <span style={{ color: item.accent, display: 'flex' }}>{item.svg}</span>
                 <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 700, color: '#0D1B2A' }}>{item.label}</span>
               </div>
             ))}

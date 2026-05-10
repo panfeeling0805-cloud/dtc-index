@@ -260,6 +260,53 @@ footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 60px 48
 .delay-3 { animation-delay: 0.35s; }
 .delay-4 { animation-delay: 0.5s; }
 
+/* ═══════════════════════════════════════════════════════════
+   GLOBAL DESIGN SYSTEM RULES
+   • Icons: Always use inline SVG (no emoji). Use .icon-solid wrapper.
+   • Buttons: Default to .btn.btn-primary (blue-purple gradient).
+═══════════════════════════════════════════════════════════ */
+
+/* Icon container — solid color bg + SVG */
+.icon-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: var(--blue-pale);
+  color: var(--blue);
+}
+.icon-solid.sm  { width: 40px; height: 40px; border-radius: 10px; }
+.icon-solid.md  { width: 56px; height: 56px; border-radius: 14px; }
+.icon-solid.lg  { width: 72px; height: 72px; border-radius: 18px; }
+.icon-solid.dark { background: var(--blue); color: white; }
+
+/* Blue-purple deep gradient section background */
+.bg-deep-gradient {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f1729 0%, #1e1060 50%, #0f1729 100%);
+}
+.bg-deep-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(124,58,237,0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(27,110,243,0.32) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, rgba(168,85,247,0.18) 0%, transparent 40%);
+  pointer-events: none;
+}
+.bg-deep-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+.bg-deep-gradient > * { position: relative; z-index: 1; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 0 24px; }

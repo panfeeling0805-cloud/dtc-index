@@ -90,7 +90,7 @@ const cardDescStyle: React.CSSProperties = {
 const primaryBtnStyle: React.CSSProperties = {
   display: 'inline-block',
   padding: '10px 22px',
-  background: BLUE,
+  background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
   color: '#fff',
   border: 'none',
   borderRadius: 8,
@@ -98,6 +98,7 @@ const primaryBtnStyle: React.CSSProperties = {
   fontSize: 14,
   cursor: 'pointer',
   alignSelf: 'flex-start',
+  boxShadow: '0 2px 12px rgba(124,58,237,0.3)',
 }
 
 // --- Success Stories data ---
@@ -177,22 +178,26 @@ const faqs = [
   },
 ]
 
+// --- Free Tools SVG icons ---
+const toolSvgs = [
+  <svg key="chart" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>,
+  <svg key="target" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+  <svg key="bolt" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+]
+
 // --- Free Tools data ---
 const tools = [
   {
-    icon: '📊',
     title: 'Ad Spend Calculator',
     desc: 'Estimate your optimal monthly ad budget based on your industry, target CPA, and revenue goals.',
     btn: 'Try Free',
   },
   {
-    icon: '🎯',
     title: 'Audience Overlap Analyzer',
     desc: 'Upload your audience lists and discover overlap rates to eliminate wasted reach across campaigns.',
     btn: 'Try Free',
   },
   {
-    icon: '⚡',
     title: 'Creative Performance Scorer',
     desc: 'Score your ad creatives before launch using our AI model trained on millions of high-performing campaigns.',
     btn: 'Try Free',
@@ -339,9 +344,15 @@ function FreeTools() {
           Practical, no-cost utilities to help you plan, analyze, and optimize your advertising efforts right now.
         </p>
         <div style={gridStyle}>
-          {tools.map((t) => (
+          {tools.map((t, idx) => (
             <div key={t.title} style={{ ...cardStyle, alignItems: 'flex-start' }}>
-              <span style={{ fontSize: 36 }}>{t.icon}</span>
+              <div style={{
+                width: 56, height: 56, borderRadius: 14,
+                background: '#EAF1FF', color: '#1B6EF3',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
+                {toolSvgs[idx]}
+              </div>
               <div style={cardTitleStyle}>{t.title}</div>
               <p style={cardDescStyle}>{t.desc}</p>
               <button style={primaryBtnStyle}>{t.btn}</button>
