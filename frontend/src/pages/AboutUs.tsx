@@ -57,7 +57,7 @@ export default function AboutUs() {
               fontSize: 15,
               color: '#64748b',
               maxWidth: 560,
-              margin: '0 auto 48px',
+              margin: '0 auto 16px',
               lineHeight: 1.6,
             }}
           >
@@ -66,11 +66,11 @@ export default function AboutUs() {
           </p>
 
           {/* aboutme1 overlay image — enlarged 50% from previous 884px */}
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', overflow: 'hidden' }}>
             <img
               src="/assets/aboutme1.png"
               alt=""
-              style={{ maxWidth: '120%', width: 1326, objectFit: 'contain', display: 'block' }}
+              style={{ maxWidth: '120%', width: 1326, objectFit: 'contain', display: 'block', marginBottom: -40 }}
             />
           </div>
         </div>

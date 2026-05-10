@@ -392,7 +392,7 @@ export default function Resources() {
   }
 
   return (
-    <main style={{ fontFamily: 'inherit', minHeight: '100vh', background: '#f7f9fd' }}>
+    <main style={{ fontFamily: 'inherit', background: '#f7f9fd' }}>
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 24px 64px', textAlign: 'center' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
