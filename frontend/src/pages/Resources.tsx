@@ -379,15 +379,17 @@ export default function Resources() {
   function tabStyle(id: Tab): React.CSSProperties {
     const active = activeTab === id
     return {
-      padding: '10px 26px',
-      borderRadius: 8,
+      padding: '12px 28px',
+      borderRadius: 0,
       fontWeight: 600,
       fontSize: 15,
       cursor: 'pointer',
-      border: active ? 'none' : '1px solid #e0e7ef',
-      background: active ? BLUE : '#fff',
-      color: active ? '#fff' : '#0d1b2e',
-      transition: 'background 0.15s, color 0.15s',
+      border: 'none',
+      background: 'transparent',
+      color: active ? '#7C3AED' : '#6b7a8d',
+      borderBottom: active ? '2.5px solid #7C3AED' : '2.5px solid transparent',
+      transition: 'color 0.15s, border-color 0.15s',
+      marginBottom: -1,
     }
   }
 
@@ -423,14 +425,14 @@ export default function Resources() {
       </section>
 
       {/* Tab Navigation */}
-      <section style={{ background: '#fff', padding: '0 24px 32px', borderBottom: '1px solid #e0e7ef' }}>
+      <section style={{ background: '#fff', padding: '0 24px', borderBottom: '1px solid #e0e7ef' }}>
         <div
           style={{
             maxWidth: 1100,
             margin: '0 auto',
             display: 'flex',
             justifyContent: 'center',
-            gap: 12,
+            gap: 0,
             flexWrap: 'wrap',
           }}
         >
@@ -450,11 +452,8 @@ export default function Resources() {
 
       {/* CTA Banner */}
       <section
-        style={{
-          background: BLUE,
-          padding: '72px 24px',
-          textAlign: 'center',
-        }}
+        className="bg-deep-gradient"
+        style={{ padding: '72px 24px', textAlign: 'center' }}
       >
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <h2
@@ -470,7 +469,7 @@ export default function Resources() {
           <p
             style={{
               fontSize: 17,
-              color: 'rgba(255,255,255,0.85)',
+              color: 'rgba(255,255,255,0.75)',
               maxWidth: 580,
               margin: '0 auto 36px',
               lineHeight: 1.7,
@@ -482,13 +481,14 @@ export default function Resources() {
           <button
             style={{
               padding: '14px 36px',
-              background: 'transparent',
-              color: '#fff',
-              border: '2px solid #fff',
-              borderRadius: 8,
+              background: '#fff',
+              color: '#7C3AED',
+              border: 'none',
+              borderRadius: 100,
               fontWeight: 700,
               fontSize: 16,
               cursor: 'pointer',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
             }}
           >
             Get Started Today
