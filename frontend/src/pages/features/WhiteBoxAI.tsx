@@ -223,95 +223,65 @@ export default function WhiteBoxAI() {
 
       {/* ── SECTION: Proven Expertise + Adaptive AI ── */}
       <section style={{
-        background: 'linear-gradient(135deg, #0f1729 0%, #1a2a50 60%, #0f1729 100%)',
+        backgroundImage: "url('/assets/Mask group1.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         padding: '96px 48px',
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
         <div style={{ maxWidth: 1100, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: 64 }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 800, color: 'white',
-              lineHeight: 1.15, marginBottom: 16,
+              lineHeight: 1.15, marginBottom: 0,
             }}>
               Proven Expertise + Adaptive AI<br />
               <span className="gradient-text">= Unbeatable Strategy</span>
             </h2>
-            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.55)', maxWidth: 500, margin: '0 auto', lineHeight: 1.7, fontFamily: "'Inter', sans-serif" }}>
-              The engine combines human advertising expertise with adaptive machine learning — in full view.
-            </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2 }}>
+          {/* Simplified 3-column card */}
+          <div style={{
+            background: 'rgba(0,0,0,0.6)',
+            border: '1px dashed rgba(255,255,255,0.35)',
+            borderRadius: 16,
+            padding: '32px 40px',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: 0,
+          }}>
             {[
               {
                 label: 'Expert Knowledge',
-                icon: '🧠',
-                points: [
-                  'Built on thousands of real campaign decisions',
-                  'Encodes best-practice bidding & budget rules',
-                  'Understands seasonality, category nuance, and buyer intent',
-                  'Continuously reviewed by human strategists',
-                ],
-                border: 'rgba(27,110,243,0.4)',
-                bg: 'rgba(27,110,243,0.1)',
+                desc: 'Real-case experience across industries +successful playbooks (FBA, DTC, B2B...)',
               },
               {
                 label: 'Strategy Engine',
-                icon: '⚙️',
-                points: [
-                  'Synthesizes expert rules with live performance data',
-                  'Generates explainable recommendations in plain language',
-                  'Weighs short-term wins vs. long-term brand health',
-                  'Updates strategy in real-time as signals change',
-                ],
-                border: 'rgba(124,58,237,0.4)',
-                bg: 'rgba(124,58,237,0.1)',
-                highlight: true,
+                desc: 'Combines expert patterns & AI learning in real-time',
               },
               {
                 label: 'AI Learning',
-                icon: '📈',
-                points: [
-                  'Learns from every outcome in your account',
-                  'Adapts models to your category and audience',
-                  'Improves bid and budget predictions over time',
-                  'Surfaces new opportunities as market shifts',
-                ],
-                border: 'rgba(34,197,94,0.35)',
-                bg: 'rgba(34,197,94,0.08)',
+                desc: 'Trained on live data to generate adaptive, performance-based actions',
               },
             ].map((col, i) => (
               <div key={col.label} style={{
-                background: col.bg,
-                border: `1px solid ${col.border}`,
-                borderRadius: i === 0 ? '16px 0 0 16px' : i === 2 ? '0 16px 16px 0' : '0',
-                padding: '36px 28px',
+                borderRight: i < 2 ? '1px solid rgba(255,255,255,0.15)' : 'none',
+                padding: '0 32px',
+                textAlign: 'center',
               }}>
-                <div style={{ fontSize: 28, marginBottom: 14 }}>{col.icon}</div>
                 <h3 style={{
                   fontFamily: "'Sora', sans-serif",
-                  fontSize: 16, fontWeight: 700,
-                  color: 'white', marginBottom: 20,
+                  fontSize: 18, fontWeight: 700,
+                  color: 'white', marginBottom: 12,
                 }}>
                   {col.label}
                 </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {col.points.map(pt => (
-                    <li key={pt} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                      <span style={{ color: '#1B6EF3', fontWeight: 700, flexShrink: 0, marginTop: 2 }}>→</span>
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.65, fontFamily: "'Inter', sans-serif" }}>{pt}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.65, fontFamily: "'Inter', sans-serif", margin: 0 }}>
+                  {col.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -358,78 +328,13 @@ export default function WhiteBoxAI() {
             </ul>
           </div>
 
-          {/* Right — dashboard mockup */}
-          <div style={{
-            background: 'white',
-            borderRadius: 20,
-            boxShadow: '0 8px 48px rgba(27,110,243,0.13)',
-            border: '1px solid #e4eeff',
-            overflow: 'hidden',
-          }}>
-            {/* Window chrome */}
-            <div style={{
-              background: '#f4f7fb',
-              padding: '12px 16px',
-              borderBottom: '1px solid #e4eeff',
-              display: 'flex', alignItems: 'center', gap: 6,
-            }}>
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-              <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 12, fontWeight: 700, color: '#6B7A8D', marginLeft: 10 }}>Strategy Decision Feed</span>
-            </div>
-
-            <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {/* Pending action */}
-              <div style={{ background: '#fff7ed', borderRadius: 14, padding: '16px 18px', border: '1px solid #fed7aa' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: '#f97316', fontFamily: "'Sora', sans-serif" }}>⏳ PENDING APPROVAL</span>
-                  <span style={{ fontSize: 10, color: '#6B7A8D' }}>2 min ago</span>
-                </div>
-                <p style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500, marginBottom: 8, lineHeight: 1.5 }}>
-                  Increase bid for <strong>"running shoes womens"</strong> from $1.20 → $1.55
-                </p>
-                <p style={{ fontSize: 12, color: '#6B7A8D', marginBottom: 12, lineHeight: 1.5 }}>
-                  Reason: CTR 4.2% (avg 1.8%), ROAS 6.1x over 14 days. Predicted rank improvement: #7 → #3.
-                </p>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <button style={{ flex: 1, background: '#1B6EF3', color: 'white', border: 'none', borderRadius: 8, padding: '8px', fontSize: 12, fontWeight: 700, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>Approve</button>
-                  <button style={{ flex: 1, background: 'white', color: '#6B7A8D', border: '1px solid #e4eeff', borderRadius: 8, padding: '8px', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: "'Sora', sans-serif" }}>Decline</button>
-                </div>
-              </div>
-
-              {/* Approved action */}
-              <div style={{ background: '#f0fdf4', borderRadius: 14, padding: '16px 18px', border: '1px solid #bbf7d0' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, color: '#16a34a', fontFamily: "'Sora', sans-serif" }}>✓ EXECUTED</span>
-                  <span style={{ fontSize: 10, color: '#6B7A8D' }}>18 min ago</span>
-                </div>
-                <p style={{ fontSize: 13, color: '#0D1B2A', fontWeight: 500, marginBottom: 6, lineHeight: 1.5 }}>
-                  Paused keyword <strong>"cheap bluetooth headphones"</strong>
-                </p>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <div style={{ background: 'white', borderRadius: 7, padding: '5px 10px', fontSize: 11, color: '#16a34a', fontWeight: 700 }}>ACOS was 94%</div>
-                  <div style={{ background: 'white', borderRadius: 7, padding: '5px 10px', fontSize: 11, color: '#1B6EF3', fontWeight: 700 }}>$48 saved</div>
-                </div>
-              </div>
-
-              {/* Info card */}
-              <div style={{ background: '#EAF1FF', borderRadius: 14, padding: '16px 18px' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#1B6EF3', marginBottom: 8, fontFamily: "'Sora', sans-serif" }}>✦ AI INSIGHT</div>
-                <p style={{ fontSize: 13, color: '#0D1B2A', lineHeight: 1.6, margin: 0 }}>
-                  Strategy is operating within your ROAS floor of 4.0x. 3 opportunities queued for tomorrow's review window.
-                </p>
-              </div>
-
-              {/* Rule indicator */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#f8faff', borderRadius: 12, padding: '12px 16px', border: '1px solid #e4eeff' }}>
-                <span style={{ fontSize: 16 }}>🔒</span>
-                <div>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: '#0D1B2A', marginBottom: 2 }}>Business Rule Active</div>
-                  <div style={{ fontSize: 11, color: '#6B7A8D' }}>Max daily budget cap: $2,500 · Min ROAS: 4.0x</div>
-                </div>
-              </div>
-            </div>
+          {/* Right — dashboard image */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img
+              src="/assets/Group 1948759932 .png"
+              alt=""
+              style={{ width: '100%', objectFit: 'contain', display: 'block' }}
+            />
           </div>
         </div>
       </section>
@@ -441,74 +346,78 @@ export default function WhiteBoxAI() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
-          {/* Left: title + cards */}
-          <div>
+          {/* Centered title */}
+          <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
               fontSize: 'clamp(28px, 4vw, 48px)',
-              fontWeight: 800, color: '#0D1B2A',
-              lineHeight: 1.15, marginBottom: 16,
+              fontWeight: 800,
+              lineHeight: 1.2, marginBottom: 0,
             }}>
-              Smarter, Safer, and{' '}
-              <span className="gradient-text">Scalable Advertising.</span>
+              <span style={{ color: '#1B6EF3' }}>Smarter, Safer,</span><br />
+              <span style={{ color: '#0D1B2A' }}>and </span>
+              <span style={{ color: '#1B6EF3' }}>Scalable</span>
+              <span style={{ color: '#0D1B2A' }}> Advertising.</span>
             </h2>
-            <p style={{ fontSize: 15, color: '#6B7A8D', lineHeight: 1.7, fontFamily: "'Inter', sans-serif", marginBottom: 40 }}>
-              Three problems every other AI ad platform creates. Zero of them with Sapientia.
-            </p>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              {[
-                {
-                  solidColor: '#1B6EF3',
-                  label: 'No Black Box',
-                  desc: 'Every decision, every recommendation, every outcome — visible and explained. You always know why your budget moved.',
-                },
-                {
-                  solidColor: '#ef4444',
-                  label: 'No Autopilot Risk',
-                  desc: 'The AI proposes. You decide. No changes execute without passing your approval rules and business constraints.',
-                },
-                {
-                  solidColor: '#16a34a',
-                  label: 'No Overfitting',
-                  desc: 'Strategies are built on expert logic plus live data — not just historical patterns that break when the market shifts.',
-                },
-              ].map(item => (
-                <div key={item.label} style={{
-                  background: 'white',
-                  borderRadius: 16,
-                  border: '1px solid #e4eeff',
-                  padding: '20px 24px',
-                  display: 'flex', alignItems: 'flex-start', gap: 16,
-                  boxShadow: '0 2px 12px rgba(27,110,243,0.05)',
-                }}>
-                  <div style={{
-                    width: 12, height: 12, borderRadius: '50%',
-                    background: item.solidColor,
-                    flexShrink: 0, marginTop: 4,
-                  }} />
-                  <div>
-                    <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 800, color: '#0D1B2A', marginBottom: 6 }}>
-                      {item.label}
-                    </div>
-                    <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, fontFamily: "'Inter', sans-serif", margin: 0 }}>
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Right: image */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img
-              src="/assets/Group 1948759932 .png"
-              alt=""
-              style={{ width: '100%', objectFit: 'contain', display: 'block' }}
-            />
+          {/* 3-column icon cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 48, textAlign: 'center' }}>
+            {[
+              {
+                svg: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="14" cy="14" r="8" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <line x1="20" y1="20" x2="28" y2="28" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                label: 'No Black Box',
+                desc: 'Understand the logic behind every decision',
+              },
+              {
+                svg: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L4 8v8c0 7 5.5 11.5 12 13 6.5-1.5 12-6 12-13V8L16 3z" stroke="white" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
+                    <polyline points="11,16 14.5,19.5 21,13" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                label: 'No Autopilot Risk',
+                desc: 'Approve actions before execution',
+              },
+              {
+                svg: (
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="10" r="4" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <circle cx="22" cy="10" r="4" stroke="white" strokeWidth="2.5" fill="none"/>
+                    <path d="M4 26c0-4.4 3.6-8 8-8h8c4.4 0 8 3.6 8 8" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                  </svg>
+                ),
+                label: 'No Overfitting',
+                desc: 'Models adapt based on your brand and audience',
+              },
+            ].map(item => (
+              <div key={item.label} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                <div style={{
+                  width: 72, height: 72, borderRadius: 18,
+                  background: '#1B6EF3',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  {item.svg}
+                </div>
+                <h3 style={{
+                  fontFamily: "'Sora', sans-serif",
+                  fontSize: 18, fontWeight: 700,
+                  color: '#1B6EF3', margin: 0,
+                }}>
+                  {item.label}
+                </h3>
+                <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.65, fontFamily: "'Inter', sans-serif", margin: 0 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
 
         </div>

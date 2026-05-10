@@ -23,7 +23,9 @@ export default function AboutUs() {
       <section
         style={{
           ...sectionBase,
-          background: 'linear-gradient(135deg, #e8f0fe 0%, #f0f5ff 100%)',
+          backgroundImage: "url('/assets/path_1.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           textAlign: 'center',
         }}
       >
@@ -61,42 +63,13 @@ export default function AboutUs() {
             across Amazon, Google, TikTok and Meta.
           </p>
 
-          {/* Robot placeholders */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 32,
-              flexWrap: 'wrap',
-            }}
-          >
-            {[
-              { bg: '#1b6ef3', label: 'Strategy Bot' },
-              { bg: '#f97316', label: 'Analytics Bot' },
-              { bg: '#22c55e', label: 'Optimize Bot' },
-            ].map(({ bg, label }) => (
-              <div
-                key={label}
-                style={{
-                  width: 120,
-                  height: 140,
-                  background: bg,
-                  borderRadius: 16,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#fff',
-                  fontWeight: 700,
-                  fontSize: 13,
-                  gap: 8,
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.12)',
-                }}
-              >
-                <span style={{ fontSize: 40 }}>🤖</span>
-                {label}
-              </div>
-            ))}
+          {/* aboutme1 overlay image */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img
+              src="/assets/aboutme1.png"
+              alt=""
+              style={{ maxWidth: '100%', width: 680, objectFit: 'contain', display: 'block' }}
+            />
           </div>
         </div>
       </section>
