@@ -3,10 +3,10 @@ import CtaLink from '../../components/CtaLink'
 
 const DashboardMockup = ({ title, rows }: { title: string; rows: { label: string; value: string; color: string; badge?: string; badgeColor?: string }[] }) => (
   <div style={{ background: 'white', borderRadius: 16, boxShadow: '0 4px 32px rgba(27,110,243,0.12)', padding: '20px 24px', border: '1px solid #f0f4ff' }}>
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-      <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} />
-      <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
-      <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+    <div className="window-chrome">
+      <span className="window-dot window-dot-green" />
+      <span className="window-dot window-dot-yellow" />
+      <span className="window-dot window-dot-red" />
       <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700, color: '#0D1B2A', marginLeft: 8 }}>{title}</span>
     </div>
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -80,12 +80,7 @@ export default function UnifiedDashboard() {
         overflow: 'hidden',
       }}>
         {/* subtle grid overlay */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(27,110,243,0.07) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay-light" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 800, margin: '0 auto' }}>
           <h1 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,
@@ -120,7 +115,8 @@ export default function UnifiedDashboard() {
       </section>
 
       {/* ── COMMAND CENTER ── */}
-      <section style={{ padding: '80px 48px', maxWidth: 1200, margin: '0 auto' }}>
+      <section className="page-section-sm">
+        <div className="page-inner">
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, marginBottom: 14, color: '#0D1B2A' }}>
             Your Business, Your{' '}
@@ -134,9 +130,11 @@ export default function UnifiedDashboard() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
           <FeatureCard
             icon={
-              <div style={{ position: 'relative', width: 64, height: 64 }}>
-                <img src="/assets/2/Rectangle 14.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
-                <img src="/assets/2/信息过滤 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              <div style={{ width: 64, height: 64, borderRadius: 14, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
               </div>
             }
             title="Universal Platform Integration"
@@ -144,9 +142,10 @@ export default function UnifiedDashboard() {
           />
           <FeatureCard
             icon={
-              <div style={{ position: 'relative', width: 64, height: 64 }}>
-                <img src="/assets/3/Rectangle 15.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
-                <img src="/assets/3/大数据 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              <div style={{ width: 64, height: 64, borderRadius: 14, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
               </div>
             }
             title="Cross-Platform Reporting"
@@ -154,10 +153,10 @@ export default function UnifiedDashboard() {
           />
           <FeatureCard
             icon={
-              <div style={{ position: 'relative', width: 64, height: 64 }}>
-                <img src="/assets/4/Rectangle 16.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
-                <img src="/assets/4/image 198.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
-                <img src="/assets/4/智能云 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              <div style={{ width: 64, height: 64, borderRadius: 14, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+                </svg>
               </div>
             }
             title="Bulk Campaign Creation"
@@ -165,20 +164,22 @@ export default function UnifiedDashboard() {
           />
           <FeatureCard
             icon={
-              <div style={{ position: 'relative', width: 64, height: 64 }}>
-                <img src="/assets/5/Rectangle 18.png" alt="" style={{ width: 64, height: 64, borderRadius: 14, display: 'block' }} />
-                <img src="/assets/5/人脸识别 1.png" alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+              <div style={{ width: 64, height: 64, borderRadius: 14, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                </svg>
               </div>
             }
             title="Format Support"
             description="From short-form video to static display, carousel to stories — Sapientia supports every ad format across every channel, auto-adapting your creative assets."
           />
         </div>
+        </div>
       </section>
 
       {/* ── MULTI-BRAND TEAM MANAGEMENT ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
+      <section className="page-section section-light">
+        <div className="page-inner" style={{ textAlign: 'center' }}>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3.5vw, 44px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 20, color: '#0D1B2A' }}>
             Seamless Multi-Brand &{' '}
             <span className="gradient-text">Team Management.</span>
@@ -199,28 +200,24 @@ export default function UnifiedDashboard() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, maxWidth: 900, margin: '0 auto' }}>
             {[
               {
-                rectSrc: '/assets/5/Rectangle 18.png',
-                iconSrc: '/assets/5/人脸识别 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>,
                 title: 'Create Business Profile',
                 desc: 'Set up dedicated workspaces for each brand or client. Keep campaigns, budgets, and data fully separated and organized.',
               },
               {
-                rectSrc: '/assets/6/Rectangle 19.png',
-                iconSrc: '/assets/6/信息提取 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>,
                 title: 'Invite Team Members',
                 desc: 'Add team members with granular permissions — admin, editor, or viewer — and control exactly what each person can see and do.',
               },
               {
-                rectSrc: '/assets/7/Rectangle 20.png',
-                iconSrc: '/assets/7/智能搜索 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B6EF3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>,
                 title: 'Switch Context Instantly',
                 desc: 'Jump between brand accounts with one click. No logging out, no confusion — just seamless context switching across your entire portfolio.',
               },
             ].map((item) => (
               <div key={item.title} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-                <div style={{ position: 'relative', width: 64, height: 64 }}>
-                  <img src={item.rectSrc} alt="" style={{ width: 64, height: 64, borderRadius: 16, display: 'block' }} />
-                  <img src={item.iconSrc} alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 36, height: 36, objectFit: 'contain' }} />
+                <div style={{ width: 64, height: 64, borderRadius: 16, background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {item.svg}
                 </div>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 700, color: '#0D1B2A' }}>{item.title}</div>
                 <div style={{ fontSize: 13, color: '#6B7A8D', lineHeight: 1.65 }}>{item.desc}</div>
@@ -231,7 +228,8 @@ export default function UnifiedDashboard() {
       </section>
 
       {/* ── CENTRALIZED CONTROL ── */}
-      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
+      <section className="page-section">
+        <div className="page-inner">
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, marginBottom: 14, color: '#0D1B2A' }}>
             Centralized Control.{' '}
@@ -254,26 +252,22 @@ export default function UnifiedDashboard() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', borderRadius: 18, overflow: 'hidden' }}>
             {[
               {
-                rectSrc: '/assets/8/Rectangle 21.png',
-                iconSrc: '/assets/8/人工智能 (2) 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>,
                 title: 'Strategy Template Library',
                 desc: 'Create reusable campaign templates with preset bid strategies, audience targeting, and creative guidelines.',
               },
               {
-                rectSrc: '/assets/9/Rectangle 22.png',
-                iconSrc: '/assets/9/用户画像 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>,
                 title: 'Bulk Rule Deployment',
                 desc: 'Push keyword lists, negative keywords, bid adjustments, and audience segments to multiple accounts simultaneously.',
               },
               {
-                rectSrc: '/assets/10/Rectangle 24.png',
-                iconSrc: '/assets/10/数据挖掘 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>,
                 title: 'Unified Budget Management',
                 desc: 'Allocate budgets across platforms and regions from a central interface with automatic spending controls.',
               },
               {
-                rectSrc: '/assets/11/Rectangle 23.png',
-                iconSrc: '/assets/11/数据建模 1.png',
+                svg: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>,
                 title: 'Creative Asset Sharing',
                 desc: 'Maintain a central creative library and deploy assets across platforms while respecting platform-specific requirements.',
               },
@@ -286,9 +280,8 @@ export default function UnifiedDashboard() {
                 background: 'white',
               }}>
                 {/* Icon */}
-                <div style={{ position: 'relative', width: 60, height: 60, flexShrink: 0 }}>
-                  <img src={item.rectSrc} alt="" style={{ width: 60, height: 60, borderRadius: 14, display: 'block' }} />
-                  <img src={item.iconSrc} alt="" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 32, height: 32, objectFit: 'contain' }} />
+                <div style={{ width: 60, height: 60, borderRadius: 14, background: '#F3EEFF', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  {item.svg}
                 </div>
                 {/* Text */}
                 <div>
@@ -298,6 +291,7 @@ export default function UnifiedDashboard() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>
 
@@ -309,12 +303,7 @@ export default function UnifiedDashboard() {
         overflow: 'hidden',
       }}>
         {/* dot grid overlay */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 56 }}>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 48px)', fontWeight: 800, marginBottom: 14, color: 'white' }}>
@@ -336,13 +325,7 @@ export default function UnifiedDashboard() {
           </div>
 
           {/* Stats row */}
-          <div style={{
-            maxWidth: 900, margin: '40px auto 0',
-            display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 0, borderRadius: 16,
-            background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)',
-            overflow: 'hidden',
-          }}>
+          <div className="stats-bar grid-3" style={{ maxWidth: 900, margin: '40px auto 0', gap: 0, borderRadius: 16 }}>
             {[
               { num: '5+', label: 'Platforms connected' },
               { num: '3x', label: 'Faster campaign setup' },
@@ -363,7 +346,7 @@ export default function UnifiedDashboard() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '96px 48px', textAlign: 'center', background: 'white' }}>
+      <section className="page-section section-white" style={{ textAlign: 'center' }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, marginBottom: 18, color: '#0D1B2A', lineHeight: 1.1, textAlign: 'center', whiteSpace: 'nowrap' }}>
             Ready to <span className="gradient-text">Unify Your Ad Management?</span>

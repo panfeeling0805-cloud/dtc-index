@@ -22,7 +22,7 @@ export default function AboutUs() {
       {/* 1. Hero Section */}
       <section
         style={{
-          paddingTop: 80,
+          paddingTop: 48,
           paddingBottom: 0,
           paddingLeft: 24,
           paddingRight: 24,
@@ -34,9 +34,9 @@ export default function AboutUs() {
         <div style={container}>
           <h1
             style={{
-              fontSize: 48,
+              fontSize: 44,
               fontWeight: 800,
-              marginBottom: 16,
+              marginBottom: 10,
               color: '#0f172a',
             }}
           >
@@ -44,10 +44,10 @@ export default function AboutUs() {
           </h1>
           <p
             style={{
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: 600,
               color: blue,
-              marginBottom: 12,
+              marginBottom: 8,
             }}
           >
             Built for Operators, Powered by Transparent AI
@@ -57,7 +57,7 @@ export default function AboutUs() {
               fontSize: 15,
               color: '#64748b',
               maxWidth: 560,
-              margin: '0 auto 16px',
+              margin: '0 auto 12px',
               lineHeight: 1.6,
             }}
           >
@@ -65,22 +65,22 @@ export default function AboutUs() {
             across Amazon, Google, TikTok and Meta.
           </p>
 
-          {/* aboutme1 overlay image — enlarged 50% from previous 884px */}
+          {/* aboutme1 overlay image */}
           <div style={{ display: 'flex', justifyContent: 'center', overflow: 'hidden' }}>
             <img
               src="/assets/aboutme1.png"
               alt=""
-              style={{ maxWidth: '120%', width: 1326, objectFit: 'contain', display: 'block', marginBottom: -40 }}
+              style={{ maxWidth: '120%', width: 1326, objectFit: 'contain', display: 'block', marginTop: -200, marginBottom: -40 }}
             />
           </div>
         </div>
       </section>
 
       {/* 2. Vision + Features Section */}
-      <section style={{ ...sectionBase, background: '#fff' }}>
+      <section style={sectionBase} className="section-white">
         <div
+          className="page-inner-sm"
           style={{
-            ...container,
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: 48,
@@ -288,7 +288,7 @@ export default function AboutUs() {
           textAlign: 'center',
         }}
       >
-        <div style={container}>
+        <div className="page-inner-sm">
           <h2
             style={{
               fontSize: 32,

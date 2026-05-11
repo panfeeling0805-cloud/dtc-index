@@ -109,6 +109,7 @@ export default function Auth() {
                 <input
                   type="email" placeholder="Enter Email" value={email}
                   onChange={e => setEmail(e.target.value)}
+                  name="email" autoComplete="email"
                   style={inputStyle}
                 />
               </div>
@@ -118,6 +119,7 @@ export default function Auth() {
                 <input
                   type="text" placeholder="Enter Email Verification Code" value={verifyCode}
                   onChange={e => setVerifyCode(e.target.value)}
+                  name="one-time-code" autoComplete="one-time-code"
                   style={{ ...inputStyle, borderRadius: '10px 0 0 10px', flex: 1 }}
                 />
                 <button

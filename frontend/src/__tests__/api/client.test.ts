@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest'
 import MockAdapter from 'axios-mock-adapter'
-import api, { joinWaitlist, sendContact } from '../../api/client'
+import api, { joinWaitlist } from '../../api/client'
 
 const mock = new MockAdapter(api)
 
@@ -22,28 +22,6 @@ describe('API client', () => {
       mock.onPost('/waitlist').reply(400, { detail: 'Email already registered' })
 
       await expect(joinWaitlist('dup@example.com')).rejects.toThrow()
-    })
-  })
-
-  describe('sendContact', () => {
-    it('成功提交联系表单', async () => {
-      mock.onPost('/contact').reply(201, { success: true })
-
-      const res = await sendContact({
-        name: '张三',
-        email: 'test@example.com',
-        message: '你好'
-      })
-      expect(res.status).toBe(201)
-      expect(res.data.success).toBe(true)
-    })
-
-    it('服务器错误时抛出异常', async () => {
-      mock.onPost('/contact').reply(500)
-
-      await expect(
-        sendContact({ name: '张三', email: 'test@example.com', message: '你好' })
-      ).rejects.toThrow()
     })
   })
 })

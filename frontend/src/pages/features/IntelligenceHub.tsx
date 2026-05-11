@@ -34,12 +34,7 @@ export default function IntelligenceHub() {
         overflow: 'hidden',
       }}>
         {/* dot grid overlay */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 760, margin: '0 auto' }}>
           <h1 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,
@@ -62,13 +57,7 @@ export default function IntelligenceHub() {
 
       {/* ── STATS BAR ── */}
       <section style={{ background: 'linear-gradient(135deg, #0f1729 0%, #1B3A5C 100%)', padding: '0 48px 72px' }}>
-        <div style={{
-          maxWidth: 960, margin: '0 auto',
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 0, borderRadius: 24,
-          background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)',
-          overflow: 'hidden',
-        }}>
+        <div className="stats-bar" style={{ maxWidth: 960, margin: '0 auto', gridTemplateColumns: 'repeat(3, 1fr)' }}>
           {[
             { num: '9', label: 'Data Categories' },
             { num: '24/7', label: 'Real-Time Processing' },
@@ -88,13 +77,9 @@ export default function IntelligenceHub() {
       </section>
 
       {/* ── TURN DATA INTO ASSETS ── */}
-      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
+      <section className="page-section page-inner">
         <div style={{ textAlign: 'center', marginBottom: 16 }}>
-          <h2 style={{
-            fontFamily: "'Sora', sans-serif",
-            fontSize: 'clamp(28px, 3.5vw, 44px)',
-            fontWeight: 800, color: '#0D1B2A', marginBottom: 16, lineHeight: 1.2,
-          }}>
+          <h2 className="page-title" style={{ marginBottom: 16, lineHeight: 1.2 }}>
             Turn Data into Assets:{' '}
             <span className="gradient-text">Build Your Long-Term Advantage</span>
           </h2>
@@ -106,7 +91,7 @@ export default function IntelligenceHub() {
         {/* 3-column compact card layout */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, alignItems: 'start' }}>
 
-          {/* Blue column */}
+          {/* Blue column — dynamic colors kept inline */}
           <div style={{
             background: 'linear-gradient(160deg, #EAF1FF 0%, #dbeafe 100%)',
             borderRadius: 20, padding: '28px 24px',
@@ -126,7 +111,7 @@ export default function IntelligenceHub() {
             </div>
           </div>
 
-          {/* Green column */}
+          {/* Green column — dynamic colors kept inline */}
           <div style={{
             background: 'linear-gradient(160deg, #f0fdf4 0%, #dcfce7 100%)',
             borderRadius: 20, padding: '28px 24px',
@@ -146,7 +131,7 @@ export default function IntelligenceHub() {
             </div>
           </div>
 
-          {/* Orange column */}
+          {/* Orange column — dynamic colors kept inline */}
           <div style={{
             background: 'linear-gradient(160deg, #fff7ed 0%, #ffedd5 100%)',
             borderRadius: 20, padding: '28px 24px',
@@ -170,7 +155,7 @@ export default function IntelligenceHub() {
       </section>
 
       {/* ── FROM CHAOS TO CLARITY ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px', textAlign: 'center' }}>
+      <section className="page-section section-light" style={{ textAlign: 'center' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <h2 style={{
             fontFamily: "'Sora', sans-serif",
@@ -186,8 +171,8 @@ export default function IntelligenceHub() {
           <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
             {[
               { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>, label: 'Connected Data', color: '#EAF1FF', accent: '#1B6EF3' },
-              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, label: 'Instant Insights', color: '#f0fdf4', accent: '#22c55e' },
-              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>, label: 'Precise Actions', color: '#fff7ed', accent: '#f97316' },
+              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>, label: 'Instant Insights', color: '#EAF1FF', accent: '#1B6EF3' },
+              { svg: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>, label: 'Precise Actions', color: '#EAF1FF', accent: '#1B6EF3' },
             ].map((item) => (
               <div key={item.label} style={{
                 display: 'flex', alignItems: 'center', gap: 10,
@@ -203,7 +188,7 @@ export default function IntelligenceHub() {
       </section>
 
       {/* ── NEVER MISS A BEAT ── */}
-      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
+      <section className="page-section page-inner">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }}>
           {/* Left */}
           <div>
@@ -223,10 +208,10 @@ export default function IntelligenceHub() {
               ].map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 14, color: '#6B7A8D', lineHeight: 1.6 }}>
                   <span style={{
-                    width: 22, height: 22, borderRadius: '50%',
-                    background: '#EAF1FF', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    flexShrink: 0, marginTop: 1, fontSize: 11, color: '#1B6EF3', fontWeight: 700,
-                  }}>✓</span>
+                    width: 8, height: 8, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
+                    flexShrink: 0, marginTop: 6, display: 'inline-block',
+                  }} />
                   {item}
                 </li>
               ))}
@@ -245,8 +230,8 @@ export default function IntelligenceHub() {
       </section>
 
       {/* ── PRIVATE CUSTOMIZATION ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
+      <section className="page-section section-light">
+        <div className="page-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'start' }}>
 
           {/* Left — Mask group image */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -289,7 +274,8 @@ export default function IntelligenceHub() {
               ].map((item) => (
                 <li key={item.title} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <span style={{
-                    width: 8, height: 8, borderRadius: '50%', background: item.accent,
+                    width: 8, height: 8, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
                     flexShrink: 0, marginTop: 6, display: 'inline-block',
                   }} />
                   <div>
@@ -319,11 +305,7 @@ export default function IntelligenceHub() {
         background: 'linear-gradient(135deg, #0f1729 0%, #1a2a50 50%, #0f1729 100%)',
         padding: '96px 48px', textAlign: 'center', position: 'relative', overflow: 'hidden',
       }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)',
-          backgroundSize: '32px 32px', pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay" />
         <div style={{ position: 'relative', zIndex: 1, maxWidth: 640, margin: '0 auto' }}>
           <h2 style={{
             fontFamily: "'Sora', sans-serif", fontWeight: 800,

@@ -1,3 +1,5 @@
+import CtaLink from '../components/CtaLink'
+
 const plans = [
   {
     name: 'Start Easy',
@@ -5,9 +7,6 @@ const plans = [
     period: '/6 months',
     desc: 'For emerging brands or lean teams looking to automate fast.',
     cta: 'Claim Free Trial',
-    ctaStyle: 'primary',
-    checkColor: '#22c55e',
-    checkBg: '#dcfce7',
     included: [
       'Up to 50 Amazon stores or ad accounts',
       'AI-powered product diagnostics and recommendations',
@@ -28,9 +27,6 @@ const plans = [
     period: '/6 months',
     desc: 'For growing brands managing high-volume campaigns across markets.',
     cta: 'Talk to Sales',
-    ctaStyle: 'primary',
-    checkColor: '#1B6EF3',
-    checkBg: '#dbeafe',
     included: [
       'Up to 300 stores or ad accounts',
       'Advanced product diagnostics and AI strategy optimization',
@@ -51,9 +47,6 @@ const plans = [
     period: '',
     desc: 'For enterprise brands and agencies with complex needs.',
     cta: 'Request a Custom Quote',
-    ctaStyle: 'primary',
-    checkColor: '#f97316',
-    checkBg: '#ffedd5',
     included: [
       'Unlimited store and ad account support',
       'Fully customized AI model deployment',
@@ -71,13 +64,11 @@ const plans = [
   },
 ]
 
-import CtaLink from '../components/CtaLink'
-
 export default function Pricing() {
   return (
     <main style={{ background: 'linear-gradient(180deg, #f0f5ff 0%, #ffffff 30%)', minHeight: '100vh' }}>
       {/* Hero */}
-      <div style={{ textAlign: 'center', padding: '80px 48px 60px' }}>
+      <div className="page-section-sm" style={{ textAlign: 'center' }}>
         <h1 style={{
           fontFamily: "'Sora', sans-serif",
           fontSize: 'clamp(32px, 4vw, 52px)',
@@ -103,25 +94,9 @@ export default function Pricing() {
       </div>
 
       {/* Pricing cards */}
-      <div style={{
-        maxWidth: 1100,
-        margin: '0 auto',
-        padding: '0 48px 100px',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: 24,
-        alignItems: 'start',
-      }}>
+      <div className="page-inner-sm grid-3" style={{ padding: '0 48px 100px', alignItems: 'start' }}>
         {plans.map((plan) => (
-          <div key={plan.name} style={{
-            background: 'white',
-            borderRadius: 20,
-            padding: '36px 28px',
-            boxShadow: '0 4px 24px rgba(27,110,243,0.08)',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 0,
-          }}>
+          <div key={plan.name} className="page-card-lg" style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {/* Plan header */}
             <div style={{ marginBottom: 24 }}>
               <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 700, color: 'var(--dark)', marginBottom: 8 }}>
@@ -159,11 +134,11 @@ export default function Pricing() {
                 {plan.included.map((item) => (
                   <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13, color: 'var(--gray)', lineHeight: 1.5 }}>
                     <span style={{
-                      width: 18, height: 18, borderRadius: 4,
-                      background: plan.checkBg,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      flexShrink: 0, marginTop: 1, fontSize: 11, color: plan.checkColor, fontWeight: 700,
-                    }}>✓</span>
+                      width: 8, height: 8, borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
+                      display: 'inline-block',
+                      flexShrink: 0, marginTop: 5,
+                    }} />
                     {item}
                   </li>
                 ))}
@@ -182,11 +157,11 @@ export default function Pricing() {
                 {plan.support.map((item) => (
                   <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: 13, color: 'var(--gray)', lineHeight: 1.5 }}>
                     <span style={{
-                      width: 18, height: 18, borderRadius: 4,
-                      background: plan.checkBg,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      flexShrink: 0, marginTop: 1, fontSize: 11, color: plan.checkColor, fontWeight: 700,
-                    }}>✓</span>
+                      width: 8, height: 8, borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
+                      display: 'inline-block',
+                      flexShrink: 0, marginTop: 5,
+                    }} />
                     {item}
                   </li>
                 ))}

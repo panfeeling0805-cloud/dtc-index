@@ -82,79 +82,81 @@ export default function ProductAmazon() {
       </section>
 
       {/* ── SECTION 1: Focus on strategy ── */}
-      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
-          {/* Left — Campaign Strategy Dashboard widget */}
-          <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
-            {/* Title bar */}
-            <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
-              <div style={{ display: 'flex', gap: 6 }}>
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+      <section className="page-section">
+        <div className="page-inner">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
+            {/* Left — Campaign Strategy Dashboard widget */}
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+            <div style={{ width: 480, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              {/* Title bar */}
+              <div style={{ padding: '12px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderBottom: '0.5px solid rgba(130,120,240,0.15)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+                </div>
+                <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                  Campaign Strategy Dashboard
+                </span>
               </div>
-              <span style={{ fontSize: 13, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Campaign Strategy Dashboard
-              </span>
-            </div>
-            {/* Body */}
-            <div style={{ padding: 14 }}>
-              {/* Tags */}
-              <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: 16, display: 'flex', flexWrap: 'wrap' as const, gap: 10, marginBottom: 12 }}>
-                {['High-CTR Products', 'Low-Converting Terms', 'Seasonal Keywords', 'Budget Optimized', 'Performance Signal'].map(tag => (
-                  <span key={tag} style={{ padding: '8px 16px', borderRadius: 999, border: '1.5px solid rgba(100,120,240,0.35)', fontSize: 13, fontWeight: 600, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', whiteSpace: 'nowrap' as const }}>
-                    {tag}
-                  </span>
+              {/* Body */}
+              <div style={{ padding: 14 }}>
+                {/* Tags */}
+                <div style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: 16, display: 'flex', flexWrap: 'wrap' as const, gap: 10, marginBottom: 12 }}>
+                  {['High-CTR Products', 'Low-Converting Terms', 'Seasonal Keywords', 'Budget Optimized', 'Performance Signal'].map(tag => (
+                    <span key={tag} style={{ padding: '8px 16px', borderRadius: 999, border: '1.5px solid rgba(100,120,240,0.35)', fontSize: 13, fontWeight: 600, background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', whiteSpace: 'nowrap' as const }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                {/* Cards */}
+                {[
+                  { title: 'Auto-Generated Strategy', text: 'Scale high-CTR products: +25% budget allocation for running shoes category based on performance signals' },
+                  { title: 'Smart Tag Filter Applied', text: 'Pause 147 low-converting terms identified by AI across 12 campaigns' },
+                ].map((card, i) => (
+                  <div key={i} style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '16px 18px', marginBottom: i < 1 ? 10 : 0, position: 'relative', overflow: 'hidden' }}>
+                    <div style={{ position: 'absolute', left: 0, top: 8, bottom: 8, width: 4, borderRadius: '0 4px 4px 0', background: 'linear-gradient(180deg,#7C3AED,#2563EB)' }} />
+                    <div style={{ paddingLeft: 12 }}>
+                      <div style={{ fontSize: 15, fontWeight: 800, letterSpacing: '0.02em', background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: 6 }}>
+                        {card.title}
+                      </div>
+                      <div style={{ fontSize: 13, color: '#7777aa', lineHeight: 1.55 }}>{card.text}</div>
+                    </div>
+                  </div>
                 ))}
               </div>
-              {/* Cards */}
-              {[
-                { title: 'Auto-Generated Strategy', text: 'Scale high-CTR products: +25% budget allocation for running shoes category based on performance signals' },
-                { title: 'Smart Tag Filter Applied', text: 'Pause 147 low-converting terms identified by AI across 12 campaigns' },
-              ].map((card, i) => (
-                <div key={i} style={{ background: 'rgba(255,255,255,0.78)', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.2)', padding: '16px 18px', marginBottom: i < 1 ? 10 : 0, position: 'relative', overflow: 'hidden' }}>
-                  <div style={{ position: 'absolute', left: 0, top: 8, bottom: 8, width: 4, borderRadius: '0 4px 4px 0', background: 'linear-gradient(180deg,#7C3AED,#2563EB)' }} />
-                  <div style={{ paddingLeft: 12 }}>
-                    <div style={{ fontSize: 15, fontWeight: 800, letterSpacing: '0.02em', background: 'linear-gradient(90deg,#7C3AED,#2563EB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: 6 }}>
-                      {card.title}
-                    </div>
-                    <div style={{ fontSize: 13, color: '#7777aa', lineHeight: 1.55 }}>{card.text}</div>
-                  </div>
-                </div>
-              ))}
+              {/* Quote banner */}
+              <div style={{ background: 'linear-gradient(90deg,#2563EB,#7C3AED)', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontSize: 15, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>Manage strategies, not spreadsheets.</span>
+              </div>
             </div>
-            {/* Quote banner */}
-            <div style={{ background: 'linear-gradient(90deg,#2563EB,#7C3AED)', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontSize: 15, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>Manage strategies, not spreadsheets.</span>
             </div>
-          </div>
-          </div>
 
-          {/* Right */}
-          <div>
-            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
-              Focus on <span className="gradient-text">strategy</span>,<br />not manual campaign<br />management
-            </h2>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
-              Your strategy on campaign co-pilot.
-            </p>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
-              Sapientia auto-tags thousands of products, keywords, ads, and performance signals with 2000+ smart labels. Operators can filter those tags to instantly build strategies — like discovering low-converting terms or scaling high-CTR products.
-            </p>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75 }}>
-              Then apply optimizations at scale, instead of digging through endless reports, you manage campaigns at the <span style={{ color: '#1B6EF3', fontWeight: 600 }}>strategy level</span>, not keyword by keyword.
-            </p>
+            {/* Right */}
+            <div>
+              <h2 className="page-title" style={{ fontSize: 'clamp(26px, 3vw, 40px)', lineHeight: 1.18, marginBottom: 16 }}>
+                Focus on <span className="gradient-text">strategy</span>,<br />not manual campaign<br />management
+              </h2>
+              <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+                Your strategy on campaign co-pilot.
+              </p>
+              <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
+                Sapientia auto-tags thousands of products, keywords, ads, and performance signals with 2000+ smart labels. Operators can filter those tags to instantly build strategies — like discovering low-converting terms or scaling high-CTR products.
+              </p>
+              <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75 }}>
+                Then apply optimizations at scale, instead of digging through endless reports, you manage campaigns at the <span style={{ color: '#1B6EF3', fontWeight: 600 }}>strategy level</span>, not keyword by keyword.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 2: Transparent strategies ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
+      <section className="page-section section-light">
+        <div className="page-inner grid-2" style={{ alignItems: 'flex-start' }}>
           {/* Left */}
           <div>
-            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
+            <h2 className="page-title" style={{ fontSize: 'clamp(26px, 3vw, 40px)', lineHeight: 1.18, marginBottom: 16 }}>
               Transparent<br />
               <span className="gradient-text">strategies.</span> Every<br />move explained.
             </h2>
@@ -232,144 +234,138 @@ export default function ProductAmazon() {
       </section>
 
       {/* ── SECTION 3: Reusable asset ── */}
-      <section style={{ padding: '96px 48px', maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
-          {/* Left — Intelligence Hub / Asset Library widget */}
-          <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <div style={{ width: 500, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
-            {/* Title bar */}
-            <div style={{ padding: '13px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }}>
-              <div style={{ display: 'flex', gap: 6 }}>
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
-                <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+      <section className="page-section">
+        <div className="page-inner">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start' }}>
+            {/* Left — Intelligence Hub / Asset Library widget */}
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+            <div style={{ width: 500, borderRadius: 20, overflow: 'hidden', border: '0.5px solid #c8c8f4', background: 'linear-gradient(145deg,#f0eeff 0%,#e8f0ff 100%)' }}>
+              {/* Title bar */}
+              <div style={{ padding: '13px 18px', display: 'flex', alignItems: 'center', gap: 8, background: 'linear-gradient(90deg,#7C3AED,#2563EB)' }}>
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FF5F57' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#FFBD2E' }} />
+                  <div style={{ width: 13, height: 13, borderRadius: '50%', background: '#27C840' }} />
+                </div>
+                <span style={{ fontSize: 14, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, color: '#fff', letterSpacing: '0.01em' }}>Intelligence Hub - Asset Library</span>
               </div>
-              <span style={{ fontSize: 14, fontWeight: 600, flex: 1, textAlign: 'center', paddingRight: 54, color: '#fff', letterSpacing: '0.01em' }}>Intelligence Hub - Asset Library</span>
-            </div>
-            {/* Body */}
-            <div style={{ padding: 14 }}>
-              <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.15)', padding: 14, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-                {/* Keywords Library */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <circle cx="11" cy="11" r="7.5" stroke="url(#al-g1)" strokeWidth="1.5"/>
-                      <path d="M17 17L22 22" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M8 11h6M11 8v6" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
+              {/* Body */}
+              <div style={{ padding: 14 }}>
+                <div style={{ background: '#fff', borderRadius: 14, border: '0.5px solid rgba(130,120,240,0.15)', padding: 14, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                  {/* Keywords Library */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g1" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <circle cx="11" cy="11" r="7.5" stroke="url(#al-g1)" strokeWidth="1.5"/>
+                        <path d="M17 17L22 22" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <path d="M8 11h6M11 8v6" stroke="url(#al-g1)" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Keywords Library</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Proven search terms & negatives</span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Keywords Library</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Proven search terms & negatives</span>
+                  {/* Product Database */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <rect x="5" y="8" width="16" height="13" rx="2.5" stroke="url(#al-g2)" strokeWidth="1.5"/>
+                        <path d="M9 8V6a4 4 0 018 0v2" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <path d="M9 14h8" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Product Database</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Item-level performance history</span>
+                    </div>
                   </div>
-                </div>
-                {/* Product Database */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g2" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <rect x="5" y="8" width="16" height="13" rx="2.5" stroke="url(#al-g2)" strokeWidth="1.5"/>
-                      <path d="M9 8V6a4 4 0 018 0v2" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
-                      <path d="M9 14h8" stroke="url(#al-g2)" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
+                  {/* Strategy Intelligence */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <circle cx="13" cy="13" r="9" stroke="url(#al-g3)" strokeWidth="1.5"/>
+                        <path d="M13 7v2M13 17v2M7 13H5M21 13h-2" stroke="url(#al-g3)" strokeWidth="1.5" strokeLinecap="round"/>
+                        <circle cx="13" cy="13" r="3" stroke="url(#al-g3)" strokeWidth="1.5"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Strategy Intelligence</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Saved playbooks & best practices</span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Product Database</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Item-level performance history</span>
+                  {/* Tags Library */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g4" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <path d="M3 13.5L10 6.5H21v10.5L14 24 3 13.5z" stroke="url(#al-g4)" strokeWidth="1.5" strokeLinejoin="round"/>
+                        <circle cx="16.5" cy="10.5" r="1.5" fill="url(#al-g4)"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Tags Library</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>2,000+ smart labels across metrics</span>
+                    </div>
                   </div>
-                </div>
-                {/* Strategy Intelligence */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g3" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <circle cx="13" cy="13" r="9" stroke="url(#al-g3)" strokeWidth="1.5"/>
-                      <path d="M13 7v2M13 17v2M7 13H5M21 13h-2" stroke="url(#al-g3)" strokeWidth="1.5" strokeLinecap="round"/>
-                      <circle cx="13" cy="13" r="3" stroke="url(#al-g3)" strokeWidth="1.5"/>
-                    </svg>
+                  {/* Bidding Strategies */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g5" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <circle cx="13" cy="13" r="9" stroke="url(#al-g5)" strokeWidth="1.5"/>
+                        <path d="M13 8v1.5M13 16.5V18M10.5 11.5C10.5 10.1 11.6 9 13 9s2.5 1.1 2.5 2.5c0 1.5-2.5 3-2.5 3s-2.5-1.5-2.5-3zM11 15h4" stroke="url(#al-g5)" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Bidding Strategies</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Rules & AI-tested adjustments</span>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Strategy Intelligence</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Saved playbooks & best practices</span>
-                  </div>
-                </div>
-                {/* Tags Library */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g4" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <path d="M3 13.5L10 6.5H21v10.5L14 24 3 13.5z" stroke="url(#al-g4)" strokeWidth="1.5" strokeLinejoin="round"/>
-                      <circle cx="16.5" cy="10.5" r="1.5" fill="url(#al-g4)"/>
-                    </svg>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Tags Library</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>2,000+ smart labels across metrics</span>
-                  </div>
-                </div>
-                {/* Bidding Strategies */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g5" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <circle cx="13" cy="13" r="9" stroke="url(#al-g5)" strokeWidth="1.5"/>
-                      <path d="M13 8v1.5M13 16.5V18M10.5 11.5C10.5 10.1 11.6 9 13 9s2.5 1.1 2.5 2.5c0 1.5-2.5 3-2.5 3s-2.5-1.5-2.5-3zM11 15h4" stroke="url(#al-g5)" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Bidding Strategies</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Rules & AI-tested adjustments</span>
-                  </div>
-                </div>
-                {/* Campaign Tactics */}
-                <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                      <defs><linearGradient id="al-g6" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
-                      <rect x="4" y="4" width="18" height="18" rx="3" stroke="url(#al-g6)" strokeWidth="1.5"/>
-                      <path d="M8 10h10M8 13h7M8 16h5" stroke="url(#al-g6)" strokeWidth="1.5" strokeLinecap="round"/>
-                    </svg>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Campaign Tactics</span>
-                    <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Seasonal & platform-specific playbooks</span>
+                  {/* Campaign Tactics */}
+                  <div style={{ background: 'rgba(219,234,254,0.5)', borderRadius: 14, border: '0.5px solid rgba(99,102,241,0.18)', padding: '14px 14px 12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 12, background: 'rgba(219,234,254,0.8)', border: '0.5px solid rgba(99,102,241,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <defs><linearGradient id="al-g6" x1="0" y1="0" x2="26" y2="26" gradientUnits="userSpaceOnUse"><stop stopColor="#7C3AED"/><stop offset="1" stopColor="#2563EB"/></linearGradient></defs>
+                        <rect x="4" y="4" width="18" height="18" rx="3" stroke="url(#al-g6)" strokeWidth="1.5"/>
+                        <path d="M8 10h10M8 13h7M8 16h5" stroke="url(#al-g6)" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1a2e' }}>Campaign Tactics</span>
+                      <span style={{ fontSize: 11.5, color: '#9999bb', lineHeight: 1.5 }}>Seasonal & platform-specific playbooks</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          </div>
+            </div>
 
-          {/* Right */}
-          <div>
-            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: '#0D1B2A' }}>
-              Turn every campaign<br />into a{' '}
-              <span className="gradient-text">reusable asset.</span>
-            </h2>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
-              Build an intelligence hub that compounds over time.
-            </p>
-            <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
-              Great strategies shouldn't disappear with each campaign. Sapientia transforms daily campaigns into an ever-growing, reusable modular — building your company's sort of <span style={{ color: '#1B6EF3', fontWeight: 600 }}>playbook</span>: from keywords to audiences, from creatives to bidding tactics — each strategy becoming smarter, faster to deploy.
-            </p>
-            <p style={{ fontSize: 13, color: '#6B7A8D', fontStyle: 'italic' }}>"From one sprint to all-in-all. 🚀"</p>
+            {/* Right */}
+            <div>
+              <h2 className="page-title" style={{ fontSize: 'clamp(26px, 3vw, 40px)', lineHeight: 1.18, marginBottom: 16 }}>
+                Turn every campaign<br />into a{' '}
+                <span className="gradient-text">reusable asset.</span>
+              </h2>
+              <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.7, marginBottom: 24, fontWeight: 600 }}>
+                Build an intelligence hub that compounds over time.
+              </p>
+              <p style={{ fontSize: 14, color: '#6B7A8D', lineHeight: 1.75, marginBottom: 16 }}>
+                Great strategies shouldn't disappear with each campaign. Sapientia transforms daily campaigns into an ever-growing, reusable modular — building your company's sort of <span style={{ color: '#1B6EF3', fontWeight: 600 }}>playbook</span>: from keywords to audiences, from creatives to bidding tactics — each strategy becoming smarter, faster to deploy.
+              </p>
+              <p style={{ fontSize: 13, color: '#6B7A8D', fontStyle: 'italic' }}>"From one sprint to all-in-all. 🚀"</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 4: Custom AI Models ── */}
-      <section style={{
-        background: 'linear-gradient(135deg, #0f1729 0%, #1a2a50 60%, #0f1729 100%)',
-        padding: '96px 48px',
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)',
-          backgroundSize: '32px 32px', pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
+      <section className="hero-dark page-section">
+        <div className="dot-overlay" />
+        <div className="page-inner grid-2" style={{ alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
           {/* Left */}
           <div>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, lineHeight: 1.18, marginBottom: 16, color: 'white' }}>
@@ -445,14 +441,9 @@ export default function ProductAmazon() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ background: 'white', padding: '96px 48px' }}>
+      <section className="page-section section-white">
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: "'Sora', sans-serif",
-            fontSize: 'clamp(32px, 4vw, 52px)',
-            fontWeight: 800, textAlign: 'center',
-            marginBottom: 64, color: '#0D1B2A',
-          }}>
+          <h2 className="page-title-lg page-title-center" style={{ marginBottom: 64 }}>
             Frequently Asked Questions
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column' }}>

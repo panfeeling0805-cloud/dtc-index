@@ -35,7 +35,4 @@ api.interceptors.response.use(
 
 export const joinWaitlist = (email: string) => api.post('/waitlist', { email })
 
-export const sendContact = (data: { name: string; email: string; message: string }) =>
-  api.post('/contact', data)
-
 export default api

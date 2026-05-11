@@ -13,12 +13,7 @@ export default function WhiteBoxAI() {
         overflow: 'hidden',
       }}>
         {/* dot grid overlay */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay" />
 
         {/* Blue glow orb */}
         <div style={{
@@ -114,18 +109,11 @@ export default function WhiteBoxAI() {
       </section>
 
       {/* ── SECTION: Guessing is Not a Strategy ── */}
-      <section style={{ padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section className="page-section">
+        <div className="page-inner-sm grid-2-loose">
           {/* Left */}
           <div>
-            <h2 style={{
-              fontFamily: "'Sora', sans-serif",
-              fontSize: 'clamp(30px, 3.5vw, 48px)',
-              fontWeight: 800,
-              lineHeight: 1.1,
-              color: '#0D1B2A',
-              marginBottom: 24,
-            }}>
+            <h2 className="page-title" style={{ lineHeight: 1.1, marginBottom: 24 }}>
               Guessing is Not<br />a Strategy.
             </h2>
             <p style={{ fontSize: 15, color: '#6B7A8D', lineHeight: 1.8, marginBottom: 16, fontFamily: "'Inter', sans-serif" }}>
@@ -148,8 +136,8 @@ export default function WhiteBoxAI() {
       </section>
 
       {/* ── SECTION: Transparent AI. You're in Control ── */}
-      <section style={{ background: '#f8faff', padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+      <section className="page-section section-light">
+        <div className="page-inner-sm">
           <div style={{ textAlign: 'center', marginBottom: 64 }}>
             <h2 style={{
               fontFamily: "'Sora', sans-serif",
@@ -168,25 +156,19 @@ export default function WhiteBoxAI() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {[
               {
-                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
                 title: 'Every Suggestion is Visible',
                 desc: 'Before any change is applied to your campaigns, you see it. The AI surfaces every recommendation with context — what triggered it, what it expects to happen, and why now.',
-                accent: '#1B6EF3',
-                bg: '#EAF1FF',
               },
               {
-                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
                 title: 'Review & Approve Before it Executes',
                 desc: 'An approval workflow puts you in the driver\'s seat. Accept, modify, or decline any action. Set auto-approve thresholds for low-risk optimizations and manual review for bigger moves.',
-                accent: '#16a34a',
-                bg: '#f0fdf4',
               },
               {
-                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>,
+                svg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>,
                 title: 'Traceable Strategy Log',
                 desc: 'Every action the AI has ever taken lives in your Strategy Log — searchable, exportable, timestamped. Use it to audit performance, train your team, and build institutional knowledge.',
-                accent: '#7C3AED',
-                bg: '#fdf4ff',
               },
             ].map(card => (
               <div key={card.title} style={{
@@ -198,9 +180,9 @@ export default function WhiteBoxAI() {
               }}>
                 <div style={{
                   width: 48, height: 48, borderRadius: 14,
-                  background: card.bg,
+                  background: 'linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: card.accent, marginBottom: 20,
+                  marginBottom: 20,
                 }}>
                   {card.svg}
                 </div>
@@ -289,16 +271,11 @@ export default function WhiteBoxAI() {
       </section>
 
       {/* ── SECTION: See every decision before it happens ── */}
-      <section style={{ padding: '96px 48px' }}>
+      <section className="page-section">
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 72, alignItems: 'center' }}>
           {/* Left */}
           <div>
-            <h2 style={{
-              fontFamily: "'Sora', sans-serif",
-              fontSize: 'clamp(28px, 3.5vw, 44px)',
-              fontWeight: 800, color: '#0D1B2A',
-              lineHeight: 1.15, marginBottom: 20,
-            }}>
+            <h2 className="page-title" style={{ lineHeight: 1.15, marginBottom: 20 }}>
               See every decision<br />
               <span className="gradient-text">before it happens.</span>
             </h2>
@@ -431,12 +408,7 @@ export default function WhiteBoxAI() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)',
-          backgroundSize: '32px 32px',
-          pointerEvents: 'none',
-        }} />
+        <div className="dot-overlay" />
         <div style={{
           position: 'absolute',
           bottom: '-20%', left: '50%',
